@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/user_register.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Voting Portal (User Portal)</span>
+      </div>
+
+      <!-- <div class="side_img">
+        <div style="text-align: left"></div><img src="img/side_image.jpg"alt="" srcset=""></div>
+      </div> -->
+
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">User Portal</span>
+        </div>
+
+        <!--<div class="user_avatar">
+            <img src="/img/avatar.png" alt="" srcset="" style="width:79px;    margin: 38px 79px;">
+        </div>-->
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="user_portal.html" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Dashboard</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="user_register_form.html" class="nav-link">
+                <i class='bx bxs-message-rounded-add icon' ></i>
+                <span class="link">Register For Vote</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="user_voting.html" class="nav-link">
+                <i class='bx bxs-upvote icon' ></i>
+                <span class="link">Cast Your Vote</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="winning_prediction.html" class="nav-link">
+                <i class='bx bx-analyse icon' ></i>
+                <span class="link">Winning Prediction</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="results.html" class="nav-link">
+                <i class='bx bxl-tailwind-css icon' ></i>
+                <span class="link">Final Results</span>
+              </a>
+            </li>
+            
+          </ul>
+
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="../cover_page.html" class="nav-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container-registration">
+        <div class="title">Voter Registration Form</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Aadhar Number</span>
+                <input type="text" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your number" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Date of Birth</span>
+                <input type="date" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Voter Id</span>
+                <input type="text" placeholder="Confirm your password" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1">
+              <input type="radio" name="gender" id="dot-2">
+              <input type="radio" name="gender" id="dot-3">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">Prefer not to say</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <section class="overlay"></section>
+
+    <script>
+      const navBar = document.querySelector("nav"),
+        menuBtns = document.querySelectorAll(".menu-icon"),
+        overlay = document.querySelector(".overlay");
+
+      menuBtns.forEach((menuBtn) => {
+        menuBtn.addEventListener("click", () => {
+          navBar.classList.toggle("open");
+        });
+      });
+
+      overlay.addEventListener("click", () => {
+        navBar.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>
+
