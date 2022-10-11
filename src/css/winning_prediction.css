@@ -10,14 +10,14 @@
   box-sizing: border-box;
 } */
 
-.results {
+.election-results .results {
   
   color: #e5e5e5;
   font: 16px/1.25 'Raleway', sans-serif;
   padding: 9.5em;
 }
 
-main,
+.election-results main,
 footer {
   display: block;
   margin-left: auto;
@@ -27,7 +27,7 @@ footer {
 }
 
 /* Headings */
-h1,
+.election-results h1,
 h2,
 h3,
 h4,
@@ -40,11 +40,11 @@ h6 {
 }
 
 /* Links */
-a {
+.election-results a {
   color: #a2ed56;
 }
 
-a:hover {
+.election-results a:hover {
   color: #83e4e2;
 }
 
@@ -54,7 +54,7 @@ a:hover {
 /********************* TABLE ********************/
 /************************************************/
 
-table {
+.election-results table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
@@ -64,17 +64,17 @@ table {
 
 
 /*** HEADER ***/
-table thead {
+.election-results table thead {
   border-bottom: 2px solid #e5e5e5;
 }
 
-table th,
+.election-results table th,
 table td {
   padding: 1em 0.5em;
   position: relative;
 }
 
-table th {
+.election-results table th {
   font: 400 1.25em/1 'Oswald', sans-serif;
   letter-spacing: 0.025em;
   outline: none;
@@ -84,13 +84,13 @@ table th {
   transition: color 0.2s ease-in-out;
 }
 
-table th:hover,
+.election-results table th:hover,
 table th:focus {
   color: #83e4e2;
 }
 
 /* Arrows */
-table th:after,
+.election-results table th:after,
 table th:before {
   border: 0.35em solid transparent;
   content: '';
@@ -103,143 +103,143 @@ table th:before {
   width: 0; 
 }
 
-table th:before {
+.election-results table th:before {
   border-bottom-color: rgba(255, 255, 255, 0.25);
   border-top: 0;
   margin-top: -0.35em;
 }
 
-table th:after {
+.election-results table th:after {
   border-bottom: 0;
   border-top-color: rgba(255, 255, 255, 0.25);
   margin-top: 0.35em;
 }
 
-table th:hover:before,
+.election-results table th:hover:before,
 table th:focus:before {
   border-bottom-color: rgba(255, 255, 255, 0.75);
 }
 
-table th:hover:after,
+.election-results table th:hover:after,
 table th:focus:after {
   border-top-color: rgba(255, 255, 255, 0.75);
 }
 
-table th[aria-sort="ascending"],
+.election-results table th[aria-sort="ascending"],
 table th[aria-sort="descending"] {
   color: #fddc32;
 }
 
-table th[aria-sort="ascending"]:before {
+.election-results table th[aria-sort="ascending"]:before {
   border-bottom-color: #a2ed56;
 }
 
-table th[aria-sort="ascending"]:after {
+.election-results table th[aria-sort="ascending"]:after {
   border-top-color: rgba(255, 255, 255, 0.25);
 }
 
-table th[aria-sort="descending"]:before {
+.election-results table th[aria-sort="descending"]:before {
   border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
-table th[aria-sort="descending"]:after {
+.election-results table th[aria-sort="descending"]:after {
   border-top-color: #fd6470;
 }
 
 
 
 /*** BODY ***/
-table tbody > tr {
+.election-results table tbody > tr {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
-table tbody > tr:hover {
+.election-results table tbody > tr:hover {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 1);
   color: #fff;
 }
 
 /* Primary Color */
-table tbody > tr:nth-of-type(6n+1) {
+.election-results table tbody > tr:nth-of-type(6n+1) {
   border-color: rgba(162, 237, 86, 0.5);
 }
 
-table tbody > tr:nth-of-type(6n+1):hover {
+.election-results table tbody > tr:nth-of-type(6n+1):hover {
   background-color: rgba(162, 237, 86, 0.25);
   border-color: rgba(162, 237, 86, 1);
 }
 
 /* Secondary Color */
-table tbody > tr:nth-of-type(6n+2) {
+.election-results table tbody > tr:nth-of-type(6n+2) {
   border-color: rgba(131, 228, 226, 0.5);
 }
 
-table tbody > tr:nth-of-type(6n+2):hover {
+.election-results table tbody > tr:nth-of-type(6n+2):hover {
   background-color: rgba(131, 228, 226, 0.25);
   border-color: rgba(131, 228, 226, 1);
 }
 
 /* Tertiary Color */
-table tbody > tr:nth-of-type(6n+3) {
+.election-results table tbody > tr:nth-of-type(6n+3) {
   border-color: rgba(253, 100, 112, 0.5);
 }
 
-table tbody > tr:nth-of-type(6n+3):hover {
+.election-results table tbody > tr:nth-of-type(6n+3):hover {
   background-color: rgba(253, 100, 112, 0.25);
   border-color: rgba(253, 100, 112, 1);
 }
 
 /* Quaternary Color */
-table tbody > tr:nth-of-type(6n+4) {
+.election-results table tbody > tr:nth-of-type(6n+4) {
   border-color: rgba(252, 168, 88, 0.5);
 }
 
-table tbody > tr:nth-of-type(6n+4):hover {
+.election-results table tbody > tr:nth-of-type(6n+4):hover {
   background-color: rgba(252, 168, 88, 0.25);
   border-color: rgba(252, 168, 88, 1);
 }
 
 /* Quinary Color */
-table tbody > tr:nth-of-type(6n+5) {
+.election-results table tbody > tr:nth-of-type(6n+5) {
   border-color: rgba(253, 220, 50, 0.5);
 }
 
-table tbody > tr:nth-of-type(6n+5):hover {
+.election-results table tbody > tr:nth-of-type(6n+5):hover {
   background-color: rgba(253, 220, 50, 0.25);
   border-color: rgba(253, 220, 50, 1);
 }
 
 /* Name Cell */
-table td[data-label="Name"] {
+.election-results table td[data-label="Name"] {
   font-weight: 700;
   letter-spacing: 0.05em;
 }
 
 /* Animal Cells */
-table td[data-label="Chickens"],
+.election-results table td[data-label="Chickens"],
 table td[data-label="Pigs"],
 table td[data-label="Snakes"] {
   text-align: center;
 }
 
 /* Check and Cross Marks */
-table tr span.yes,
+.election-results table tr span.yes,
 table tr span.no {
   transition: all 0.2s ease-in-out;
 }
 
-table tr:hover span.yes,
+.election-results table tr:hover span.yes,
 table tr:hover span.no {
   color: #fff;
 }
 
-table span.yes {
+.election-results table span.yes {
   color: #a2ed56;
   font-size: 1.25em;
 }
 
-table span.no {
+.election-results table span.no {
   color: #fd6470;
   font-size: 0.875em;
 }
@@ -247,11 +247,11 @@ table span.no {
 
 
 /*** FOOTER ***/
-footer {
+.election-results footer {
   text-align: center;
 }
 
-footer a {
+.election-results footer a {
   display: inline-block;
 }
 
@@ -265,31 +265,31 @@ footer a {
 @media (max-width: 50em) {
 
   /*** TABLE ***/
-  table tr,
+  .election-results table tr,
   table td {
     display: block;
   }
 
-  table tr {
+  .election-results table tr {
     padding: 0.75em 0;
   }
 
   /* Header */
-  table thead tr {
+  .election-results table thead tr {
     text-align: center;
   }
 
-  table th {
+  .election-results table th {
     display: block;
     padding: 0.25em 0.5em;
   }
 
   /* Body */
-  table td {
+  .election-results table td {
     padding: 0.25em 0.5em 0.25em 6.5em;
   }
 
-  table td:before {
+  .election-results table td:before {
     content: attr(data-label);
     font: 400 1.125em/1 'Oswald', sans-serif;
     left: 0.5em;
@@ -299,14 +299,14 @@ footer a {
   }
 
   /* Animal Cells */
-  table td[data-label="Chickens"],
+  .election-results table td[data-label="Chickens"],
   table td[data-label="Pigs"],
   table td[data-label="Snakes"] {
     text-align: left;
   }
 
   /* Check and Cross Marks */
-  table span.yes {
+  .election-results table span.yes {
     line-height: 0.875;
   }
 }

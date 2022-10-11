@@ -1,8 +1,10 @@
 import React from 'react';
 import '../css/login.css';
-import '../css/cover_page.css';
+import '../css/user_login.css';
 import shape from '../img/shape.png';
 import logo from '../img/logo.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 function UserLogin() {
   return (
@@ -120,14 +122,16 @@ function UserLogin() {
                     </label>
                   </div>
                   <div className="group">
-                    <a href="user_portal.html">
+                  {/* <Link to="/user-portal/dashboard"> */}
                       <input
                         type="submit"
                         className="button"
                         defaultValue="Sign In"
+                        value="Sign In"
                       />
-                    </a>
+                    {/* </Link> */}
                   </div>
+                  <FontAwesomeIcon icon="fa-brands fa-google" />
                   <div className="hr" />
                   <div className="foot-lnk">
                     <a href="#forgot">Forgot Password?</a>
@@ -169,13 +173,14 @@ function UserLogin() {
                     <input id="pass" type="text" className="input" />
                   </div>
                   <div className="group">
-                    <a href="user_portal.html">
+                    {/* <Link to="/user-portal/dashboard"> */}
                       <input
                         type="submit"
                         className="button"
                         defaultValue="Sign Up"
+                        value="Sign Up"
                       />
-                    </a>
+                    {/* </Link> */}
                   </div>
                 </div>
               </div>

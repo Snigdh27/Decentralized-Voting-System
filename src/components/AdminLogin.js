@@ -1,8 +1,9 @@
 import React from 'react';
-import '../css/login.css';
-import '../css/cover_page.css';
+import '../css/adminLogin2.css';
+import '../css/adminLogin1.css';
 import shape from '../img/shape.png';
 import logo from '../img/logo.jpg';
+
 
 function AdminLogin() {
   return (
@@ -122,7 +123,10 @@ function AdminLogin() {
                         defaultValue="Sign In"
                       />
                     </a>
+                    {/* <Link to='/admin/dashboard' className='button'></Link> */}
+                    
                   </div>
+                  
                   <div className="hr" />
                   <div className="foot-lnk">
                     <a href="#forgot">Forgot Password?</a>
@@ -171,6 +175,7 @@ function AdminLogin() {
                         defaultValue="Sign Up"
                       />
                     </a>
+                    {/* <Link to='/admin/dashboard' className='button'></Link> */}
                   </div>
                 </div>
               </div>

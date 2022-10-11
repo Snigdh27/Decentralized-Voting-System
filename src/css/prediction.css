@@ -1,14 +1,14 @@
-.chartBarsWrap {
+.prediction .chartBarsWrap {
     padding-left: 40px;
     margin: 238px 33px 70px 60px;
 }
-  .chartBars {
+.prediction  .chartBars {
     position: relative;
     max-width: 600px;
     height: 300px;
     margin: 50px auto 100px;
   }
-  .chartBars .bars {
+  .prediction .chartBars .bars {
     display: flex;
     justify-content: space-around;
     border-left: 1px solid #bbb;
@@ -19,7 +19,7 @@
     padding: 0 1%;
     margin: 0;
   }
-  .chartBars .bars li {
+  .prediction .chartBars .bars li {
     display: inline-block;
     flex: 0 1 24%;
     height: 100%;
@@ -28,7 +28,7 @@
     position: relative;
     font-size: 16px;
   }
-  .chartBars .bars li .bar {
+  .prediction  .chartBars .bars li .bar {
     width: 100%;
     background: #49E;
     position: absolute;
@@ -42,14 +42,14 @@
     outline: 2px solid transparent;
     transition: 1.5s height cubic-bezier(0.6, 0.4, 0.4, 1.1);
   }
-  .chartBars .bars li .bar:after {
+  .prediction .chartBars .bars li .bar:after {
     content: '%';
     font-size: 22px !important;
     vertical-align: top;
     color: rgba(255, 255, 255, 0.8);
     margin-right: -8px;
   }
-  .chartBars .bars li b {
+  .prediction .chartBars .bars li b {
     color: #eee;
     width: 100%;
     position: absolute;
@@ -57,7 +57,7 @@
     left: 0;
     text-align: center;
   }
-  .chartBars .numbers {
+  .prediction .chartBars .numbers {
     width: 50px;
     height: 100%;
     margin: 0;
@@ -66,7 +66,7 @@
     position: absolute;
     left: -50px;
   }
-  .chartBars .numbers li {
+  .prediction .chartBars .numbers li {
     text-align: right;
     padding-right: 1em;
     list-style: none;
@@ -77,7 +77,7 @@
     right: -9px;
     color: #eee;
   }
-  .chartBars .numbers li:after {
+  .prediction .chartBars .numbers li:after {
     content: "\00af";
     position: relative;
     right: -5px;
@@ -85,47 +85,47 @@
     top: 7px;
     color: rgba(255, 255, 255, 0.34);
   }
-  .chartBars .numbers li:first-of-type {
+  .prediction .chartBars .numbers li:first-of-type {
     height: 63px;
     margin-top: -1px;
   }
-  .chartBars1 .bar {
+  .prediction .chartBars1 .bar {
     border-top-right-radius: 30px;
   }
-  .chartBars2 {
+  .prediction .chartBars2 {
     max-width: 350px;
   }
-  .chartBars2 .bars {
+  .prediction .chartBars2 .bars {
     padding: 0;
   }
-  .chartBars2 .bars li {
+  .prediction  .chartBars2 .bars li {
     flex: 0 1 25%;
   }
-  .chartBars2 .bars li .bar {
+  .prediction .chartBars2 .bars li .bar {
     box-shadow: 0 0 20px #222;
   }
-  .chartBars3 {
+  .prediction  .chartBars3 {
     background: rgba(255, 255, 255, 0.1);
     border-top: 1px solid #666;
     border-right: 1px solid #666;
   }
-  .chartBars3 .bars {
+  .prediction  .chartBars3 .bars {
     border-color: #666;
     padding: 0;
   }
-  .chartBars3 .bars li .bar {
+  .prediction .chartBars3 .bars li .bar {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     font-size: 22px !important;
   }
-  .chartBars3 .bars li .bar:after {
+  .prediction  .chartBars3 .bars li .bar:after {
     font-size: 0.6em !important;
   }
-  .chartBarsWrap.chartBarsHorizontal {
+  .prediction .chartBarsWrap.chartBarsHorizontal {
     flex-direction: column;
     padding-left: 70px;
   }
-  .chartBarsWrap.chartBarsHorizontal .bars b {
+  .prediction  .chartBarsWrap.chartBarsHorizontal .bars b {
     color: #eee;
     width: 100%;
     position: absolute;
@@ -134,13 +134,13 @@
     left: -102%;
     text-align: right;
   }
-  .chartBarsWrap.chartBarsHorizontal .chartBars {
+  .prediction  .chartBarsWrap.chartBarsHorizontal .chartBars {
     height: 200px;
   }
-  .chartBarsWrap.chartBarsHorizontal .chartBars .bars {
+  .prediction .chartBarsWrap.chartBarsHorizontal .chartBars .bars {
     border: 0;
   }
-  .chartBarsWrap.chartBarsHorizontal .chartBars .bars .bar {
+  .prediction  .chartBarsWrap.chartBarsHorizontal .chartBars .bars .bar {
     width: 0;
     padding-top: 10px;
     height: 100% !important;
@@ -148,50 +148,50 @@
     font-size: 1.5em;
     transition: 2s width cubic-bezier(0.6, 0.4, 0.4, 1.1);
   }
-  .chartBarsWrap.chartBarsHorizontal .chartBars .bars .bar:after {
+  .prediction  .chartBarsWrap.chartBarsHorizontal .chartBars .bars .bar:after {
     font-size: 0.6em !important;
     margin-right: 20px;
   }
-  .bars li .bar.greenBar {
+  .prediction  .bars li .bar.greenBar {
     background-color: #6B8E23;
     background: radial-gradient(#99cb32, #6B8E23);
   }
-  .bars li .bar.greenBarFlat {
+  .prediction .bars li .bar.greenBarFlat {
     background-color: #6B8E23;
   }
-  .bars li .bar.blueBar {
+  .prediction .bars li .bar.blueBar {
     background-color: #49E;
     background: radial-gradient(#8abff4, #49E);
   }
-  .bars li .bar.blueBarFlat {
+  .prediction .bars li .bar.blueBarFlat {
     background-color: #49E;
   }
-  .bars li .bar.orangeBar {
+  .prediction .bars li .bar.orangeBar {
     background-color: orange;
     background: radial-gradient(#ffc04d, #FFA500);
   }
-  .bars li .bar.orangeBarFlat {
+  .prediction  .bars li .bar.orangeBarFlat {
     background-color: orange;
   }
-  .bars li .bar.purpleBar {
+  .prediction .bars li .bar.purpleBar {
     background-color: #6e46af;
     background: radial-gradient(#9778c9, #6e46af);
   }
-  .bars li .bar.purpleBarFlat {
+  .prediction .bars li .bar.purpleBarFlat {
     background-color: #6e46af;
   }
-  .box-piesite {
+  .prediction .box-piesite {
     text-align: center;
     font-size: 22px;
   }
-  .piesite {
+  .prediction .piesite {
     position: relative;
     width: 1em;
     height: 1em;
     font-size: 10em;
     cursor: default;
   }
-  .piesite .percent {
+  .prediction .piesite .percent {
     position: absolute;
     top: 1.1em;
     left: 0.1em;
@@ -200,21 +200,21 @@
     text-align: center;
     z-index: 2;
   }
-  .piesite .percent .symbol {
+  .prediction .piesite .percent .symbol {
     font-size: 0.5em;
     vertical-align: top;
     opacity: 0.5;
   }
-  .piesite > #slice {
+  .prediction .piesite > #slice {
     position: absolute;
     width: 1em;
     height: 1em;
     clip: rect(0px, 1em, 1em, 0.5em);
   }
-  .piesite > #slice.gt50 {
+  .prediction .piesite > #slice.gt50 {
     clip: rect(auto, auto, auto, auto);
   }
-  .piesite > #slice > .pie {
+  .prediction .piesite > #slice > .pie {
     position: absolute;
     border: 0.1em solid #444;
     width: 1em;
@@ -222,22 +222,22 @@
     clip: rect(0em, 0.5em, 1em, 0em);
     border-radius: 0.5em;
   }
-  li.design .piesite > #slice > .pie {
+  .prediction li.design .piesite > #slice > .pie {
     border-color: #49E;
   }
-  li.usability .piesite > #slice > .pie {
+  .prediction li.usability .piesite > #slice > .pie {
     border-color: #FFA500;
   }
-  li.creativity .piesite > #slice > .pie {
+  .prediction li.creativity .piesite > #slice > .pie {
     border-color: #6B8E23;
   }
-  .piesite > #slice > .pie.fill {
+  .prediction .piesite > #slice > .pie.fill {
     transform: rotate(180deg) !important;
   }
-  .piesite.fill > .percent {
+  .prediction .piesite.fill > .percent {
     display: none;
   }
-  .piesite:after {
+  .prediction .piesite:after {
     content: '';
     display: block;
     position: absolute;
@@ -249,7 +249,7 @@
     border-radius: 100%;
     z-index: 1;
   }
-  .piesite:before {
+  .prediction .piesite:before {
     content: '';
     display: block;
     position: absolute;
@@ -259,28 +259,28 @@
     opacity: 0.5;
     z-index: 0;
   }
-  .piesite:before {
+  .prediction .piesite:before {
     background: rgba(255, 255, 255, 0.1);
   }
-  .box-piesite ul {
+  .prediction .box-piesite ul {
     padding: 0;
   }
-  .box-piesite ul li {
+  .prediction .box-piesite ul li {
     display: inline-block;
     margin: 10px 20px;
   }
-  .chartBarsHorizontal .chartBars .bars {
+  .prediction .chartBarsHorizontal .chartBars .bars {
     flex-direction: column;
   }
   @media screen and (min-width: 600px) {
-    .bar:before {
+    .prediction .bar:before {
       font-size: 2em !important;
     }
-    .chartBars3 .bar:before {
+    .prediction .chartBars3 .bar:before {
       font-size: 1.5em !important;
     }
   }
-  .tooltip > .tooltipContent {
+  .prediction .tooltip > .tooltipContent {
     display: block;
     position: absolute;
     background: none repeat scroll 0 0 #222;
@@ -303,14 +303,14 @@
     text-transform: none;
     transition: all 0.3s ease-in-out;
   }
-  .tooltip:hover > .tooltipContent {
+  .prediction .tooltip:hover > .tooltipContent {
     opacity: 1;
     filter: alpha(opacity=100);
     z-index: 99;
     transform: translate(-50%, -130%);
     transition: all 0.2s ease;
   }
-  .tooltip .tooltipContent:after {
+  .prediction .tooltip .tooltipContent:after {
     border-color: #222 rgba(0, 0, 0, 0);
     border-style: solid;
     border-width: 15px 15px 0;
@@ -322,20 +322,20 @@
     position: absolute;
     width: 0;
   }
-  .bar-graph {
+  .prediction .bar-graph {
     font-family: 'Quicksand', sans-serif;
     color: #ddd;
   }
-  .bar-graph h1,
+  .prediction .bar-graph h1,
   h2,
   h3 {
     text-align: center;
   }
-  .bar-graph h1 {
+  .prediction .bar-graph h1 {
     margin: 100px auto 0;
     color: #F0B015;
   }
-  .bar-graph h2 {
+  .prediction .bar-graph h2 {
     margin: 20px auto 0;
     font-size: 1.2em;
   }

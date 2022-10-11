@@ -3,6 +3,7 @@ import '../css/cover_page.css';
 import shape from '../img/shape.png';
 import logo from '../img/logo.jpg';
 import person from '../img/person.jpg';
+import {Link} from "react-router-dom";
 
 function CoverPage() {
   return (
@@ -56,12 +57,12 @@ function CoverPage() {
             system decentralized using the Ethereum Framework.
           </p>
           <div className="cta">
-            <a href="/admin/login_page_admin.html" className="btn">
-              Admin Login
-            </a>&nbsp;
-            <a href="/user/login_page_user.html" className="btn">
-              User Login
-            </a>
+            
+            <Link to="/admin-portal" className='btn'>Admin Login</Link>
+            &nbsp;
+            <Link to="/user-portal" className='btn'>User Login</Link>
+              
+            
           </div>
         </div>
         <div className="right">

@@ -1,43 +1,52 @@
+import React from 'react';
 import './App.css';
-// import AddCandidate from './components/AddCandidate';
+
+import CoverPage from './components/CoverPage';
+import AdminLogin from './components/AdminLogin';
+import UserLogin from './components/UserLogin';
+
+import UserDashboard from './components/UserDashboard';
+import AdminDashboard from './components/AdminDashboard';
+
+import UserRegisterForm from './components/UserRegisterForm';
+import UserVoting from './components/UserVoting';
+import {Route,Routes} from 'react-router-dom';
+
+import WinningPrediction from './components/WinningPrediction';
+
+import UserElections from './components/UserElections';
+
+import ElectionResults from './components/ElectionResults';
+
+import AddCandidate from './components/AddCandidate';
 import RemoveCandidate from './components/RemoveCandidate';
-// import CandidateDetails from './components/CandidateDetails';
+import CandidateDetails from './components/CandidateDetails';
 
-// import ElectionDetails from './components/ElectionDetails';
-// import CreateElection from './components/CreateElection';
-// import AdminDashboard from './components/AdminDashboard';
-// import ElectionResults from './components/ElectionResults';
-
-// import WinningPrediction from './components/WinningPrediction';
-
-// import UserVoting from './components/UserVoting';
-// import UserElections from './components/UserElections';
-// import UserRegisterForm from './components/UserRegisterForm';
-// import CoverPage from './components/CoverPage';
-// import AdminLogin from './components/AdminLogin';
-// import UserLogin from './components/UserLogin';
-// import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
-// import UserDashboard from './components/UserDashboard';
-
+import ElectionDetails from './components/ElectionDetails';
+import CreateElection from './components/CreateElection';
 
 function App() {
   return (
-    <>
-      {/* <Router>
-        <Link to="">CoverPage</Link>
-        <Link to="/user-login">User Login</Link>
-        <Route path='' component={CoverPage}/>
-        <Route path='/user-login' component={UserLogin}/>
-      </Router> */}
-      {/* <CoverPage/> */}
-      {/* <UserLogin/> */}
-      <RemoveCandidate/>
-      {/* <UserDashboard/> */}
-      {/* <UserRegisterForm/> */}
-      {/* <UserElections/> */}
-      {/* <UserVoting/> */}
-      {/* <ElectionResults/> */}
-    </>
+    <div className="">
+        <Routes> 
+          
+          <Route exact path="/" element={<CoverPage/>} />
+          <Route exact path="/admin-portal" element={<AdminLogin/>} />
+          <Route exact path="/user-portal" element={<UserLogin/>} />
+           <Route exact path="/user/dashboard" element={<UserDashboard/>}/> 
+          <Route exact path="/admin/dashboard" element={<AdminDashboard/>}/>
+          <Route exact path='admin/create-election' element={<CreateElection/>}/> 
+          <Route exact path="/user/register-for-vote" element={<UserRegisterForm/>}/>
+          <Route exact path='/admin/candidate-details' element={<CandidateDetails/>}/>
+          <Route exact path='/user/results' element={<ElectionResults/>}/>
+          <Route exact path='/admin/add-candidate' element={<AddCandidate/>}/>
+          <Route exact path="/user/voting-area" element={<UserVoting/>}/>
+          <Route exact path='/user/winning-prediction' element={<WinningPrediction/>}/>
+          <Route exact path='/user/elections' element={<UserElections/>}/>
+          <Route exact path='/admin/election-details' element={<ElectionDetails/>}/>
+          <Route exact path='/admin/remove-candidate' element={<RemoveCandidate/>}/>
+        </Routes> 
+      </div>
   );
 }
 
