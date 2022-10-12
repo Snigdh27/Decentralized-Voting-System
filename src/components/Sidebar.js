@@ -2,6 +2,23 @@ import React from 'react';
 import '../css/sidebar.css';
 
 function Sidebar() {
+
+  // function onclick(){
+  //   const navBar = document.querySelector("nav"),
+  //       menuBtns = document.querySelectorAll(".menu-icon"),
+  //       overlay = document.querySelector(".overlay");
+
+  //     menuBtns.forEach((menuBtn) => {
+  //       menuBtn.addEventListener("click", () => {
+  //         navBar.classList.toggle("open");
+  //       });
+  //     });
+
+  //     overlay.addEventListener("click", () => {
+  //       navBar.classList.remove("open");
+  //     });
+  // }
+
   return (
     <>
           <nav>
@@ -67,7 +84,7 @@ function Sidebar() {
       </div>
     </div>
   </nav>
-  <section className="overlay" />
+  <section className="overlay"/>
     </>
   )
 }

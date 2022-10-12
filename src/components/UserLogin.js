@@ -4,7 +4,9 @@ import '../css/user_login.css';
 import shape from '../img/shape.png';
 import logo from '../img/logo.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import Login from './Login';
+import {Link} from "react-router-dom";
+import LoginForm from './LoginForm';
 
 function UserLogin() {
   return (
@@ -61,7 +63,8 @@ function UserLogin() {
         <div className="right person">
           <div className="login-wrap">
             <div className="login-html">
-              <p
+            <LoginForm/>
+               {/* <p
                 className="tab"
                 style={{ color: "white", textAlign: "center" }}
               >
@@ -122,16 +125,19 @@ function UserLogin() {
                     </label>
                   </div>
                   <div className="group">
-                  {/* <Link to="/user-portal/dashboard"> */}
+                   <Link to="/user-portal/dashboard"> 
+                  <Link to="/user/dashboard" className='button'><p>Sign In</p></Link>
                       <input
                         type="submit"
                         className="button"
                         defaultValue="Sign In"
-                        value="Sign In"
-                      />
-                    {/* </Link> */}
-                  </div>
-                  <FontAwesomeIcon icon="fa-brands fa-google" />
+                        
+                      /> 
+                    </Link>
+                   </div>
+                  <div className="g-signin">
+                   <Login />
+                 </div>
                   <div className="hr" />
                   <div className="foot-lnk">
                     <a href="#forgot">Forgot Password?</a>
@@ -173,17 +179,17 @@ function UserLogin() {
                     <input id="pass" type="text" className="input" />
                   </div>
                   <div className="group">
-                    {/* <Link to="/user-portal/dashboard"> */}
+                    <Link to="/user-portal/dashboard">
                       <input
                         type="submit"
                         className="button"
                         defaultValue="Sign Up"
                         value="Sign Up"
                       />
-                    {/* </Link> */}
-                  </div>
-                </div>
-              </div>
+                    </Link>
+                  </div>  */}
+                {/* </div>
+              </div> */}
             </div>
           </div>
         </div>

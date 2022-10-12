@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-
 import CoverPage from './components/CoverPage';
 import AdminLogin from './components/AdminLogin';
 import UserLogin from './components/UserLogin';
@@ -24,8 +23,10 @@ import CandidateDetails from './components/CandidateDetails';
 
 import ElectionDetails from './components/ElectionDetails';
 import CreateElection from './components/CreateElection';
+// import LoginForm from './components/LoginForm';
 
 function App() {
+
   return (
     <div className="">
         <Routes> 
@@ -46,6 +47,7 @@ function App() {
           <Route exact path='/admin/election-details' element={<ElectionDetails/>}/>
           <Route exact path='/admin/remove-candidate' element={<RemoveCandidate/>}/>
         </Routes> 
+        {/* <LoginForm/> */}
       </div>
   );
 }

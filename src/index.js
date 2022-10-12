@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom';
+// import Login from './components/Login';
 
 ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
+  // <React.StrictMode>
+  //   <div className="g-signin">
+  //     <Login />
+  //   </div>
+  // </React.StrictMode>,
   document.getElementById("root")
 );
 // If you want to start measuring performance in your app, pass a function
