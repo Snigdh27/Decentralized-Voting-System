@@ -4,7 +4,8 @@ import '../css/adminLogin1.css';
 import shape from '../img/shape.png';
 import logo from '../img/logo.jpg';
 import LoginForm from './LoginForm';
-
+import { Link } from 'react-router-dom';
+import LoginFormAdmin from './LoginFormAdmin';
 
 function AdminLogin() {
   return (
@@ -20,7 +21,8 @@ function AdminLogin() {
             style={{ borderRadius: "50%" }}
           />
           <h3>
-            <a href="../cover_page.html">Online Voting Portal</a>
+          <Link to="/">Online Voting Portal</Link>
+            {/* <a href="../cover_page.html">Online Voting Portal</a> */}
           </h3>
         </div>
         <div className="links">
@@ -64,7 +66,7 @@ function AdminLogin() {
           <div className="login-wrap">
             <div className="login-html">
               
-              <LoginForm title="Admin"/>
+              <LoginFormAdmin/>
             </div>
           </div>
         </div>

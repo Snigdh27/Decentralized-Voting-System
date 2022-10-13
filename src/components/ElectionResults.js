@@ -1,12 +1,13 @@
 import React from 'react'
 import '../css/winning_prediction.css';
 import Sidebar from './Sidebar';
+import SidebarUser from './SidebarUser';
 
 function ElectionResults() {
   return (
     <>
   
-  <Sidebar title="User"/>
+  <SidebarUser/>
   <div className="election-results">
   <section className="results">
     <main>

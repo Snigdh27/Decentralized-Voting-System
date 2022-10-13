@@ -19,7 +19,7 @@ function ElectionDetails() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="#">Cast Your Vote</a>
+          {/* <a href="#">Cast Your Vote</a> */}
         </div>
       </div>
       <div className="card">
@@ -31,7 +31,7 @@ function ElectionDetails() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="#">Cast Your Vote</a>
+          {/* <a href="#">Cast Your Vote</a> */}
         </div>
       </div>
       <div className="card">
@@ -43,7 +43,7 @@ function ElectionDetails() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="#">Cast Your Vote</a>
+          {/* <a href="#">Cast Your Vote</a> */}
         </div>
       </div>
       <div className="card">
@@ -55,7 +55,7 @@ function ElectionDetails() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="#">Cast Your Vote</a>
+          {/* <a href="#">Cast Your Vote</a> */}
         </div>
       </div>
       <div className="card">
@@ -67,7 +67,7 @@ function ElectionDetails() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="#">Cast Your Vote</a>
+          {/* <a href="#">Cast Your Vote</a> */}
         </div>
       </div>
       <div className="card">
@@ -79,7 +79,7 @@ function ElectionDetails() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="#">Cast Your Vote</a>
+          {/* <a href="#">Cast Your Vote</a> */}
         </div>
       </div>
     </div>

@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../css/user_elections.css';
 import Sidebar from './Sidebar';
+import SidebarUser from './SidebarUser';
+
 
 function UserElections() {
   return (
     <>
-  <Sidebar title="User"/>
+    <SidebarUser/>
   <div className="user-elections">
   <div className="dashboard-cards">
     <div className="card-container">
@@ -18,7 +21,8 @@ function UserElections() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="voting_candidates_user.html">Cast Your Vote</a>
+          <Link to="/user/voting-area">Cast Your Vote</Link>
+          
         </div>
       </div>
       <div className="card">
@@ -30,7 +34,7 @@ function UserElections() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="voting_candidates_user.html">Cast Your Vote</a>
+          <Link to="/user/voting-area">Cast Your Vote</Link>
         </div>
       </div>
       <div className="card">
@@ -42,7 +46,7 @@ function UserElections() {
             excepturi reiciendis facere, officiis ullam. Illum iusto,
             repellendus itaque corrupti suscipit at!
           </p>
-          <a href="voting_candidates_user.html">Cast Your Vote</a>
+          <Link to="/user/voting-area">Cast Your Vote</Link>
         </div>
       </div>
     </div>

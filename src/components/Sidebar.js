@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/sidebar.css";
+import { Link } from 'react-router-dom';
 
 function Sidebar(props) {
   function sidebar_function() {
@@ -55,48 +56,48 @@ function Sidebar(props) {
           <div className="sidebar-content">
             <ul className="lists">
               <li className="list">
-                <a href="admin_portal.html" className="nav-link">
-                  <i className="bx bx-home-alt icon" />
-                  <span className="link">Dashboard</span>
-                </a>
+              <Link to="/admin/dashboard" className="nav-link"><i className="bx bx-home-alt icon" />
+                  <span className="link">Dashboard</span></Link>
               </li>
               <li className="list">
-                <a href="create_election.html" className="nav-link">
-                  <i className="bx bx-add-to-queue icon" />
+              <Link to="/admin/create-election" className="nav-link">
+              <i className="bx bx-add-to-queue icon" />
                   <span className="link">Create Election</span>
-                </a>
+              </Link>
               </li>
               <li className="list">
-                <a href="admin_election_details.html" className="nav-link">
-                  <i className="bx bx-message-detail icon" />
+              <Link to="/admin/election-details" className="nav-link">
+              <i className="bx bx-message-detail icon" />
                   <span className="link">Election Details</span>
-                </a>
+              </Link>
+               
               </li>
               <li className="list">
-                <a href="admin_candidate_details.html" className="nav-link">
-                  <i className="bx bx-message-detail icon" />
+              <Link to="/admin/candidate-details" className="nav-link">
+              <i className="bx bx-message-detail icon" />
                   <span className="link">Candidate details</span>
-                </a>
+              </Link>
               </li>
               <li className="list">
-                <a href="add_candidate.html" className="nav-link">
-                  <i className="bx bx-message-square-add icon" />
-                  <span className="link">Add Candidate</span>
-                </a>
+              <Link to="/admin/add-candidate" className="nav-link"><i className="bx bx-message-square-add icon" />
+                  <span className="link">Add Candidate</span></Link>
+                
               </li>
               <li className="list">
-                <a href="remove_candidate.html" className="nav-link">
-                  <i className="bx bx-message-square-minus icon" />
+              <Link to="/admin/remove-candidate" className="nav-link">
+              <i className="bx bx-message-square-minus icon" />
                   <span className="link">Remove Candidate</span>
-                </a>
+              </Link>
+               
               </li>
             </ul>
             <div className="bottom-cotent">
               <li className="list">
-                <a href="../cover_page.html" className="nav-link">
-                  <i className="bx bx-log-out icon" />
+              <Link to="/" className="nav-link">
+              <i className="bx bx-log-out icon" />
                   <span className="link">Logout</span>
-                </a>
+              </Link>
+                
               </li>
             </div>
           </div>

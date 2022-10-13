@@ -1,14 +1,16 @@
 import React from 'react'
 import '../css/user_register.css';
 import Sidebar from './Sidebar';
+import SidebarUser from './SidebarUser';
 
 function UserRegisterForm() {
   return (
     <>
-  <Sidebar title="User"/>
+  <SidebarUser/>
   <div className="user-register-form">
   <div className="container-registration">
     <div className="title">Voter Registration Form</div>
+    <br />
     <div className="content">
       <form action="#">
         <div className="user-details">

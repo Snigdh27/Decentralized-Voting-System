@@ -9,6 +9,11 @@ body{
 .clearfix:after{clear:both;display:block}
 a{color:inherit;text-decoration:none}
 
+.button {
+    margin: 15px 31px;
+}
+
+
 .login-wrap{
 	width:81%;
 	margin:auto;
@@ -44,6 +49,7 @@ a{color:inherit;text-decoration:none}
 .login-html .tab,
 .login-form .group .label,
 .login-form .group .button{
+	margin: 10px 24px;
 	text-transform:uppercase;
 }
 .login-html .tab{

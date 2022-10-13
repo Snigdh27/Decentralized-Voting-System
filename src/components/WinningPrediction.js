@@ -1,11 +1,12 @@
 import React from 'react';
 import '../css/prediction.css';
 import Sidebar from './Sidebar';
+import SidebarUser from './SidebarUser';
 
 function WinningPrediction() {
   return (
     <>
-  <Sidebar title="User"/>
+   <SidebarUser/>
   <div className="prediction">
   <div className="bar-graph">
     <div className="chartBarsWrap">

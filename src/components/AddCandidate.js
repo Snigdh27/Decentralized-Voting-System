@@ -11,6 +11,7 @@ function AddCandidate() {
   <div className="add-candidate">
   <div className="container-registration">
     <div className="title">ADD CANDIDATE</div>
+    <br />
     <div className="content">
       <form action="#">
         <div className="user-details">

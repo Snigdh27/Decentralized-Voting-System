@@ -1,12 +1,12 @@
 import React from 'react';
 import '../css/user_dashboard.css';
 import Sidebar from './Sidebar';
-
+import SidebarUser from './SidebarUser';
 
 function UserDashboard() {
   return (
     <>
-  <Sidebar title="User"/>
+    <SidebarUser/>
   <div id="main-version">
     <div id="version">USER INSTRUCTIONS</div>
     <div>

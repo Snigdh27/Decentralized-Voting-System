@@ -20,20 +20,22 @@
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-.user-register-form .container-registration .title{
+.user-register-form .container-registration .title {
   font-size: 25px;
   font-weight: 500;
+  color: black;
   position: relative;
 }
 .user-register-form .container-registration .title::before{
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    position: absolute;
+    margin: -11px 5px;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 .user-register-form .content form .user-details{
   display: flex;

@@ -19,6 +19,12 @@
     
 }
 
+.user-elections p {
+    color: black;
+    font-weight: 450;
+    line-height: 1.5;
+}
+
 .user-elections .dashboard-cards::after{
     content: '';
     position: absolute;
@@ -59,6 +65,7 @@
 .user-elections .card-container .card .content{
     padding: 20px;
     text-align: center;
+    font-family: 'Poppins';
     transform: translateY(100px);
     opacity: 1;
     transition: 0.5s;
@@ -73,13 +80,16 @@
     position: absolute;
     top: -80px;
     right: 30px;
-    font-size: 8em;
+    font-size: 9em;
     color: rgba(255, 255, 255, 0.05);
     pointer-events: none;
+    font-weight: 600;
 }
 
 .user-elections .card-container .card .content h3{
-    font-size: 1.8em;
+    font-size: 2em;
+    line-height: 1.4;
+    font-family: 'Poppins';
     color: #fff;
     z-index: 1;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Signup from './components/authentication/Signup';
+// import Signup from './components/authentication/Signup';
 import CoverPage from './components/CoverPage';
 import AdminLogin from './components/AdminLogin';
 import UserLogin from './components/UserLogin';
@@ -36,7 +38,7 @@ function App() {
           <Route exact path="/user-portal" element={<UserLogin/>} />
            <Route exact path="/user/dashboard" element={<UserDashboard/>}/> 
           <Route exact path="/admin/dashboard" element={<AdminDashboard/>}/>
-          <Route exact path='admin/create-election' element={<CreateElection/>}/> 
+          <Route exact path='/admin/create-election' element={<CreateElection/>}/> 
           <Route exact path="/user/register-for-vote" element={<UserRegisterForm/>}/>
           <Route exact path='/admin/candidate-details' element={<CandidateDetails/>}/>
           <Route exact path='/user/results' element={<ElectionResults/>}/>
@@ -46,6 +48,7 @@ function App() {
           <Route exact path='/user/elections' element={<UserElections/>}/>
           <Route exact path='/admin/election-details' element={<ElectionDetails/>}/>
           <Route exact path='/admin/remove-candidate' element={<RemoveCandidate/>}/>
+          <Route exact path='/user/signup' element={<Signup/>}/>
         </Routes> 
         {/* <LoginForm/> */}
       </div>

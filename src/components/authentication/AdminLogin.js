@@ -6,7 +6,7 @@ import GoogleButton from "react-google-button";
 import { useUserAuth } from "./UserAuthContext";
 import './Login.css';
 
-const Login = (props) => {
+const LoginAdmin = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -18,7 +18,7 @@ const Login = (props) => {
     setError("");
     try {
       await logIn(email, password);
-      navigate("/user/dashboard");
+      navigate("/admin/dashboard");
     } catch (err) {
       setError(err.message);
     }
@@ -28,7 +28,7 @@ const Login = (props) => {
     e.preventDefault();
     try {
       await googleSignIn();
-      navigate("/user/dashboard");
+      navigate("/admin/dashboard");
     } catch (error) {
       console.log(error.message);
     }
@@ -37,7 +37,7 @@ const Login = (props) => {
   return (
     <>
       <div className="">
-        <p className="tab" style={{ color: "white", textAlign: "center" }}>{props.title} Login</p>
+        <p className="tab" style={{ color: "white", textAlign: "center" }}>ADMIN Login</p>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="input" id="user" controlId="formBasicEmail">
@@ -78,10 +78,10 @@ const Login = (props) => {
       
       <div className=" hr foot-lnk">
       <br />
-        Don't have an account? <Link to="/user/signup"><div style={{color:"white"}}>Sign up</div></Link>
+        Don't have an account? <Link to="/signup"><div style={{color:"white"}}>Sign up</div></Link>
       </div>
     </>
   );
 };
 
-export default Login;
+export default LoginAdmin;

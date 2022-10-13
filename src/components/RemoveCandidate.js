@@ -10,6 +10,7 @@ function RemoveCandidate() {
   <div className="remove-candidate">
   <div className="container-registration">
     <div className="title">REMOVE CANDIDATE</div>
+    <br />
     <div className="content">
       <form action="#">
         <div className="user-details">

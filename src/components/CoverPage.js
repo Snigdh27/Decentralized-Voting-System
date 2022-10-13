@@ -20,7 +20,8 @@ function CoverPage() {
             style={{ borderRadius: "50%" }}
           />
           <h3>
-            <a href="cover_page.html">Online Voting Portal</a>
+          <Link to="/">Online Voting Portal</Link>
+            {/* <a href="cover_page.html"></a> */}
           </h3>
         </div>
         <div className="links">

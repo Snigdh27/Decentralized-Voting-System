@@ -1,11 +1,12 @@
 import React from 'react'
 import '../css/voting.css';
 import Sidebar from './Sidebar';
+import SidebarUser from './SidebarUser';
 
 function UserVoting() {
   return (
     <>
-  <Sidebar title="User"/>
+  <SidebarUser/>
   <div className="user-voting">
   <section className="profile-cards">
     <div className="profile-card-1">

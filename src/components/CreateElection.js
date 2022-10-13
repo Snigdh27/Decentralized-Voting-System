@@ -9,6 +9,7 @@ function CreateElection() {
   <div className="create-election">
   <div className="container-registration">
     <div className="title">Create New Election</div>
+    <br />
     <div className="content">
       <form action="#">
         <div className="user-details">
@@ -46,7 +47,7 @@ function CreateElection() {
           </div>
         </div>
         <div className="button">
-          <input type="submit" defaultValue="Create Election" />
+          <input type="submit" defaultValue="Create Election" value="Create Election" />
         </div>
       </form>
     </div>
