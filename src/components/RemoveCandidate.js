@@ -6,7 +6,7 @@ function RemoveCandidate() {
   return (
     <>
   
-  <Sidebar/>
+  <Sidebar title="Admin"/>
   <div className="remove-candidate">
   <div className="container-registration">
     <div className="title">REMOVE CANDIDATE</div>

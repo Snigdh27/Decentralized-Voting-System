@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 function CandidateDetails() {
   return (
     <>
-<Sidebar/>
+  <Sidebar title="Admin"/>
   <section className="profile-cards">
     <div className="profile-card-1">
       <div className="img">

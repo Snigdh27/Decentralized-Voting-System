@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 function UserVoting() {
   return (
     <>
-  <Sidebar/>
+  <Sidebar title="User"/>
   <div className="user-voting">
   <section className="profile-cards">
     <div className="profile-card-1">

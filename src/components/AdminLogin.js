@@ -3,6 +3,7 @@ import '../css/adminLogin2.css';
 import '../css/adminLogin1.css';
 import shape from '../img/shape.png';
 import logo from '../img/logo.jpg';
+import LoginForm from './LoginForm';
 
 
 function AdminLogin() {
@@ -62,123 +63,8 @@ function AdminLogin() {
         <div className="right person">
           <div className="login-wrap">
             <div className="login-html">
-              <p
-                className="tab"
-                style={{ color: "white", textAlign: "center" }}
-              >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN
-                LOGIN
-              </p>
-              <br />
-              <br />
-              <input
-                id="tab-1"
-                type="radio"
-                name="tab"
-                className="sign-in"
-                defaultChecked=""
-              />
-              <label htmlFor="tab-1" className="tab">
-                Sign In
-              </label>&nbsp;
-              <input id="tab-2" type="radio" name="tab" className="sign-up" />
-              <label htmlFor="tab-2" className="tab">
-                Sign Up
-              </label>
-              <div className="login-form">
-                <div className="sign-in-htm">
-                  <div className="group">
-                    <label htmlFor="user" className="label">
-                      Username
-                    </label>
-                    <input id="user" type="text" className="input" />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="pass" className="label">
-                      Password
-                    </label>
-                    <input
-                      id="pass"
-                      type="password"
-                      className="input"
-                      data-type="password"
-                    />
-                  </div>
-                  <div className="group">
-                    <input
-                      id="check"
-                      type="checkbox"
-                      className="check"
-                      defaultChecked=""
-                    />
-                    <label htmlFor="check">
-                      <span className="icon" /> Keep me Signed in
-                    </label>
-                  </div>
-                  <div className="group">
-                    <a href="admin_portal.html">
-                      <input
-                        type="submit"
-                        className="button"
-                        defaultValue="Sign In"
-                      />
-                    </a>
-                    {/* <Link to='/admin/dashboard' className='button'></Link> */}
-                    
-                  </div>
-                  
-                  <div className="hr" />
-                  <div className="foot-lnk">
-                    <a href="#forgot">Forgot Password?</a>
-                  </div>
-                </div>
-                <div className="sign-up-htm">
-                  <div className="group">
-                    <label htmlFor="user" className="label">
-                      Username
-                    </label>
-                    <input id="user" type="text" className="input" />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="pass" className="label">
-                      Password
-                    </label>
-                    <input
-                      id="pass"
-                      type="password"
-                      className="input"
-                      data-type="password"
-                    />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="pass" className="label">
-                      Confirm Password
-                    </label>
-                    <input
-                      id="pass"
-                      type="password"
-                      className="input"
-                      data-type="password"
-                    />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="pass" className="label">
-                      Email Address
-                    </label>
-                    <input id="pass" type="text" className="input" />
-                  </div>
-                  <div className="group">
-                    <a href="admin_portal.html">
-                      <input
-                        type="submit"
-                        className="button"
-                        defaultValue="Sign Up"
-                      />
-                    </a>
-                    {/* <Link to='/admin/dashboard' className='button'></Link> */}
-                  </div>
-                </div>
-              </div>
+              
+              <LoginForm title="Admin"/>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import Sidebar from './Sidebar';
 function UserDashboard() {
   return (
     <>
-  <Sidebar/>
+  <Sidebar title="User"/>
   <div id="main-version">
     <div id="version">USER INSTRUCTIONS</div>
     <div>

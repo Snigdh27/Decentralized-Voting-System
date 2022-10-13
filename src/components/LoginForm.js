@@ -11,7 +11,7 @@ import UserDashboard from "./UserDashboard";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/LoginForm.css';
 
-function LoginForm(){
+function LoginForm(props){
     return(
         <div className="login_form">
         <Container >
@@ -27,7 +27,7 @@ function LoginForm(){
                   </ProtectedRoute>
                 }
               />
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Login title={props.title}/>} />
               <Route path="/signup" element={<Signup />} />
             </Routes>
           </UserAuthContextProvider>

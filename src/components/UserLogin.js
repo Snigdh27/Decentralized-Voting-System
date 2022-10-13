@@ -63,7 +63,7 @@ function UserLogin() {
         <div className="right person">
           <div className="login-wrap">
             <div className="login-html">
-            <LoginForm/>
+            <LoginForm title="User"/>
                {/* <p
                 className="tab"
                 style={{ color: "white", textAlign: "center" }}

@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 function WinningPrediction() {
   return (
     <>
-  <Sidebar/>
+  <Sidebar title="User"/>
   <div className="prediction">
   <div className="bar-graph">
     <div className="chartBarsWrap">

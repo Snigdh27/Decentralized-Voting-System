@@ -6,7 +6,7 @@ function ElectionResults() {
   return (
     <>
   
-  <Sidebar/>
+  <Sidebar title="User"/>
   <div className="election-results">
   <section className="results">
     <main>

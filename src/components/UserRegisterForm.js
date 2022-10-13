@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 function UserRegisterForm() {
   return (
     <>
-  <Sidebar/>
+  <Sidebar title="User"/>
   <div className="user-register-form">
   <div className="container-registration">
     <div className="title">Voter Registration Form</div>

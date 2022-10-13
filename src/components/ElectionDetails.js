@@ -6,7 +6,7 @@ function ElectionDetails() {
   return (
     <div>
       <>
-  <Sidebar/>
+      <Sidebar title="Admin"/>
   <div className="election-details">
   <div className="dashboard-cards">
     <div className="card-container">

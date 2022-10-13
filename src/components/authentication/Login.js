@@ -6,7 +6,7 @@ import GoogleButton from "react-google-button";
 import { useUserAuth } from "./UserAuthContext";
 import './Login.css';
 
-const Login = () => {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <>
       <div className="">
-        <p className="tab" style={{ color: "white", textAlign: "center" }}>User Login</p>
+        <p className="tab" style={{ color: "white", textAlign: "center" }}>{props.title} Login</p>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="input" id="user" controlId="formBasicEmail">

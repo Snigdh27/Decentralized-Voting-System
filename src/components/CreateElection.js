@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 function CreateElection() {
   return (
     <>
-  <Sidebar/>
+  <Sidebar title="Admin"/>
   <div className="create-election">
   <div className="container-registration">
     <div className="title">Create New Election</div>

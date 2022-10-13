@@ -7,7 +7,7 @@ function AddCandidate() {
 
   return (
     <>
-  <Sidebar/>
+  <Sidebar title="Admin"/>
   <div className="add-candidate">
   <div className="container-registration">
     <div className="title">ADD CANDIDATE</div>
