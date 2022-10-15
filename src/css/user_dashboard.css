@@ -31,7 +31,8 @@
 #main-version h1 {
     font-size: 24px;
     color: #23282d;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 31px;
 }
 
 #main-version a {

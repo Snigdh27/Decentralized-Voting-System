@@ -9,7 +9,7 @@
 }
 body {
   min-height: 100%;
-  background: #161623;
+  background: #b8c6db;
 }
 .SidebarUser nav {
   z-index: 999;
@@ -39,16 +39,20 @@ body {
 .SidebarUser .logo .logo-name {
   color: #333;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 650;
 }
 .SidebarUser nav .sidebar {
   position: fixed;
   top: 0;
   left: -100%;
+  background-image: url(//www.gstatic.com/mobilesdk/190424_mobilesdk/nav_nachos@2x.png);
   height: 100%;
   width: 260px;
   padding: 20px 0;
-  background-color: #e3f2fd;
+  /* background-color: #e3f2fd; */
+  background-size: 256px 556px;
+  background-position: left 0 bottom 0;
+  background-color: #051e34;
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }

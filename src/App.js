@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Signup from './components/authentication/Signup';
+// import Signup from './components/authentication/Signup';
 // import Signup from './components/authentication/Signup';
 import CoverPage from './components/CoverPage';
 import AdminLogin from './components/AdminLogin';
@@ -26,6 +26,7 @@ import CandidateDetails from './components/CandidateDetails';
 import ElectionDetails from './components/ElectionDetails';
 import CreateElection from './components/CreateElection';
 // import LoginForm from './components/LoginForm';
+import AnimatedButton from './components/button-animation/AnimatedButton';
 
 function App() {
 
@@ -48,7 +49,8 @@ function App() {
           <Route exact path='/user/elections' element={<UserElections/>}/>
           <Route exact path='/admin/election-details' element={<ElectionDetails/>}/>
           <Route exact path='/admin/remove-candidate' element={<RemoveCandidate/>}/>
-          <Route exact path='/user/signup' element={<Signup/>}/>
+          {/* <Route exact path='/user/signup' element={<Signup/>}/> */}
+          <Route exact path='/animatedButton' element={<AnimatedButton/>}/>
         </Routes> 
         {/* <LoginForm/> */}
       </div>

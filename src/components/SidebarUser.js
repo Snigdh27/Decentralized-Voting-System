@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import logo from '../img/logo.jpg';
 
 function SidebarUser() {
 
@@ -46,49 +46,48 @@ function SidebarUser() {
         <div className="logo">
           <i className="bx bx-menu menu-icon" onClick={sidebar_function} />
           <span className="logo-name">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online
-            Voting Portal (User Portal)
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Voting Portal
           </span>
         </div>
         <div className="sidebar">
           <div className="logo">
-              <i className="bx bx-menu menu-icon" onClick={sidebar_function2}/>
+              <i className="bx bx-menu menu-icon" style={{color:"white"}} onClick={sidebar_function2}/>
 
-            <span className="logo-name">User Portal</span>
+            <span className="logo-name" style={{color:"white"}}>User Portal</span>
           </div>
           <div className="sidebar-content">
             <ul className="lists">
               <li className="list">
-              <Link to="/user/dashboard" className="nav-link"><i className="bx bx-home-alt icon" />
-                  <span className="link">Dashboard</span></Link>
+              <Link to="/user/dashboard" className="nav-link"><i className="bx bx-home-alt icon" style={{color:"#fcfcfcd4"}} />
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Dashboard</span></Link>
                 
               </li>
               <li className="list">
-              <Link to="/user/register-for-vote" className='nav-link'><i className='bx bxs-message-rounded-add icon' />
-                  <span className="link">Register For Vote</span></Link>
+              <Link to="/user/register-for-vote" className='nav-link'><i className='bx bxs-message-rounded-add icon' style={{color:"#fcfcfcd4"}} />
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Register For Vote</span></Link>
                 
               </li>
               <li className="list">
-              <Link to="/user/elections" className="nav-link"><i className='bx bxs-upvote icon' />
-                  <span className="link">Cast Your Vote</span></Link>
+              <Link to="/user/elections" className="nav-link"><i className='bx bxs-upvote icon' style={{color:"#fcfcfcd4"}} />
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Cast Your Vote</span></Link>
                 
               </li>
               <li className="list">
-              <Link to="/user/winning-prediction" className="nav-link"><i className='bx bx-analyse icon' />
-                  <span className="link">Winning Prediction</span></Link>
+              <Link to="/user/winning-prediction" className="nav-link"><i className='bx bx-analyse icon' style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Winning Prediction</span></Link>
                 
               </li>
               <li className="list">
-              <Link to="/user/results" className="nav-link"><i className='bx bxl-tailwind-css icon' />
-                  <span className="link">Final Results</span></Link>
+              <Link to="/user/results" className="nav-link"><i className='bx bxl-tailwind-css icon' style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Final Results</span></Link>
                 
               </li>
               
             </ul>
             <div className="bottom-cotent">
               <li className="list">
-              <Link to="/" className="nav-link"><i className="bx bx-log-out icon" />
-                  <span className="link">Logout</span></Link>
+              <Link to="/" className="nav-link"><i className="bx bx-log-out icon" style={{color:"white"}} />
+                  <span className="link" style={{color:"white"}}>Logout</span></Link>
                 
               </li>
             </div>

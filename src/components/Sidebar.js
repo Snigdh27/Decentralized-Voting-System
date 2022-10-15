@@ -49,44 +49,44 @@ function Sidebar(props) {
         </div>
         <div className="sidebar">
           <div className="logo">
-              <i className="bx bx-menu menu-icon" onClick={sidebar_function2}/>
+              <i className="bx bx-menu menu-icon" style={{color:"white"}} onClick={sidebar_function2}/>
 
-            <span className="logo-name">{props.title} Portal</span>
+            <span className="logo-name" style={{color:"white"}}>{props.title} Portal</span>
           </div>
           <div className="sidebar-content">
-            <ul className="lists">
+            <ul className="lists" >
               <li className="list">
-              <Link to="/admin/dashboard" className="nav-link"><i className="bx bx-home-alt icon" />
-                  <span className="link">Dashboard</span></Link>
+              <Link to="/admin/dashboard" className="nav-link"><i className="bx bx-home-alt icon" style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Dashboard</span></Link>
               </li>
               <li className="list">
               <Link to="/admin/create-election" className="nav-link">
-              <i className="bx bx-add-to-queue icon" />
-                  <span className="link">Create Election</span>
+              <i className="bx bx-add-to-queue icon" style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Create Election</span>
               </Link>
               </li>
               <li className="list">
               <Link to="/admin/election-details" className="nav-link">
-              <i className="bx bx-message-detail icon" />
-                  <span className="link">Election Details</span>
+              <i className="bx bx-message-detail icon" style={{color:"#fcfcfcd4"}} />
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Election Details</span>
               </Link>
                
               </li>
               <li className="list">
               <Link to="/admin/candidate-details" className="nav-link">
-              <i className="bx bx-message-detail icon" />
-                  <span className="link">Candidate details</span>
+              <i className="bx bx-message-detail icon" style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Candidate details</span>
               </Link>
               </li>
               <li className="list">
-              <Link to="/admin/add-candidate" className="nav-link"><i className="bx bx-message-square-add icon" />
-                  <span className="link">Add Candidate</span></Link>
+              <Link to="/admin/add-candidate" className="nav-link"><i className="bx bx-message-square-add icon"style={{color:"#fcfcfcd4"}} />
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Add Candidate</span></Link>
                 
               </li>
               <li className="list">
               <Link to="/admin/remove-candidate" className="nav-link">
-              <i className="bx bx-message-square-minus icon" />
-                  <span className="link">Remove Candidate</span>
+              <i className="bx bx-message-square-minus icon" style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Remove Candidate</span>
               </Link>
                
               </li>
@@ -94,8 +94,8 @@ function Sidebar(props) {
             <div className="bottom-cotent">
               <li className="list">
               <Link to="/" className="nav-link">
-              <i className="bx bx-log-out icon" />
-                  <span className="link">Logout</span>
+              <i className="bx bx-log-out icon" style={{color:"white"}}/>
+                  <span className="link" style={{color:"white",fontSize:"50"}}>Logout</span>
               </Link>
                 
               </li>
