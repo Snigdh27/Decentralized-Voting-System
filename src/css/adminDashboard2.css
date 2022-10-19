@@ -68,3 +68,12 @@
 #copyright a:hover {
     color: #08d4c4;
 }
+
+.heading{
+    font-family: 'Poppins';
+    font-weight: 700;
+    margin: 3.25em 2px -1em;
+    color: #313b64;
+    font-size: 2.5rem;
+    text-align: center;
+}

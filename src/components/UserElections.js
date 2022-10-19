@@ -10,6 +10,7 @@ function UserElections() {
     <>
     <SidebarUser/>
   <div className="user-elections">
+  <h1>Ongoing Elections</h1>
   <div className="dashboard-cards">
     <div className="card-container">
       <div className="card">

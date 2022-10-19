@@ -8,6 +8,7 @@ function ElectionDetails() {
       <>
       <Sidebar title="Admin"/>
   <div className="election-details">
+  <h1>Election Details</h1>
   <div className="dashboard-cards">
     <div className="card-container">
       <div className="card">

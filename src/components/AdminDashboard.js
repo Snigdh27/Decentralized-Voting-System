@@ -10,6 +10,7 @@ function AdminDashboard() {
   return (
     <>
   <Sidebar title="Admin"/>
+  <h1 className='heading'>Admin Dashboard</h1>
   <div id="main-version">
     <div id="version">ADMIN INSTRUCTIONS</div>
     <div>

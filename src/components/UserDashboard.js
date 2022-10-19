@@ -7,6 +7,7 @@ function UserDashboard() {
   return (
     <>
     <SidebarUser/>
+  <h1 className='heading'>User Dashboard</h1>
   <div id="main-version">
     <div id="version">USER INSTRUCTIONS</div>
     <div>

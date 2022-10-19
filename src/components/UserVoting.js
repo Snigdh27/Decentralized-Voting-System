@@ -30,6 +30,7 @@ function UserVoting() {
     <>
   <SidebarUser/>
   <div className="user-voting">
+  <h1>Candidate List</h1>
   <section className="profile-cards">
     
      <Candidates imgUrl="https://i.pinimg.com/550x/4d/72/97/4d7297dad94265c0acbc3b677d418935.jpg" candidateName="Candidate-1" party="Party" experience="experience" age="AB" region="Region" district="District"/>

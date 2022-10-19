@@ -10,9 +10,30 @@
   box-sizing: border-box;
 } */
 
+/* .election-results section:before {
+  position: absolute;
+  top: -250px;
+  left: -350px;
+  width: 500px;
+  height: 500px;
+  content: '';
+  background: rgba(108, 90, 232, 0.25);
+  transform: rotate(30deg);
+}
+.election-results section:after {
+  position: absolute;
+  bottom: -250px;
+  right: -350px;
+  width: 500px;
+  height: 500px;
+  content: '';
+  background: rgba(108, 90, 232, 0.25);
+  transform: rotate(30deg);
+} */
+
 .election-results .results {
   
-  color: #e5e5e5;
+  color: #313b64;
   font: 16px/1.25 'Raleway', sans-serif;
   padding: 9.5em;
 }
@@ -27,8 +48,16 @@ footer {
 }
 
 /* Headings */
-.election-results h1,
-h2,
+
+.election-results h1{
+  font-family: 'Poppins';
+  font-weight: 700;
+  margin: 0.25em 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.election-results h2,
 h3,
 h4,
 h5,
@@ -75,7 +104,7 @@ table td {
 }
 
 .election-results table th {
-  font: 400 1.25em/1 'Oswald', sans-serif;
+  font: 800 1.25em/1 'poppins', sans-serif;
   letter-spacing: 0.025em;
   outline: none;
   padding-right: 2em;
@@ -86,7 +115,7 @@ table td {
 
 .election-results table th:hover,
 table th:focus {
-  color: #83e4e2;
+  color: #8b83e4;
 }
 
 /* Arrows */

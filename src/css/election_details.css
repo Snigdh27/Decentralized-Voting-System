@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #161623;
+    background: #dcdcff;
 }
 
 .election-details p {
@@ -52,7 +52,7 @@
     margin: 35px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(103 103 158);
     overflow: hidden;
     display: flex;
     margin-top: 184px;
@@ -113,4 +113,13 @@
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.election-details h1 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    margin: 3.25em 2px -3em;
+    color: #313b64;
+    font-size: 2.5rem;
+    text-align: center;
 }

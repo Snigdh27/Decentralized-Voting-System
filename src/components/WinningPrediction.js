@@ -6,73 +6,99 @@ import $ from 'jquery';
 
 function WinningPrediction() {
 
-  $(function(){
-    $('table').tablesorter(); 
-  });
+  // $(function(){
+  //   $('table').tablesorter(); 
+  // });
 
   return (
     <>
    <SidebarUser/>
-  <div className="prediction">
-  <div className="bar-graph">
-    <div className="chartBarsWrap">
-      <div className="chartBars chartBars1">
-        <ul className="numbers">
-          <li>
-            <span>100%</span>
-          </li>
-          <li>
-            <span>80%</span>
-          </li>
-          <li>
-            <span>60%</span>
-          </li>
-          <li>
-            <span>40%</span>
-          </li>
-          <li>
-            <span>20%</span>
-          </li>
-          <li>
-            <span>0%</span>
-          </li>
-        </ul>
-        <ul className="bars">
-          <li>
-            <span className="tooltip">
-              <span className="tooltipContent">
-                Very important info that you should read!
-              </span>
-              <div data-percentage={52} className="bar greenBar trigger" />
-            </span>
-            <b>Alpha</b>
-          </li>
-          <li>
-            <span className="tooltip">
-              <span className="tooltipContent">This one is trending well.</span>
-              <div data-percentage={83} className="bar blueBar trigger" />
-            </span>
-            <b>Beta</b>
-          </li>
-          <li>
-            <span className="tooltip">
-              <span className="tooltipContent">I like cheese!</span>
-              <div data-percentage={94} className="bar orangeBar trigger" />
-            </span>
-            <b>Gamma</b>
-          </li>
-          <li>
-            <span className="tooltip">
-              <span className="tooltipContent">Monkey's are funny!</span>
-              <div data-percentage={64} className="bar purpleBar trigger" />
-            </span>
-            <b>Delta</b>
-          </li>
-        </ul>
+  <div className="win-prediction">
+  <main>
+  <section id="skills" className="toad-fullscreen">
+  <h1>Winning Prediction</h1>
+    {/* <article className="skills">
+      <div className="t-6">
+        <p>
+          Party-1
+          <span />
+          <span className="skills" />
+        </p>
       </div>
-    </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-2
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-3
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-4
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-5
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-6
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-7
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+      <br />
+      <div className="t-6">
+        <p>
+        Party-8
+          <span />
+          <span className="skills" />
+        </p>
+      </div>
+    </article> */}
+    <div class="igFrameBar">
+  <div class="igData igData1"></div>
+  <div class="igData igData2"></div>
+  <div class="igData igData3"></div>
+  <div class="igData igData4"></div>
+  <div class="igData igData5"></div>
+  <div class="igData igData6"></div>
+  <div class="igData igData7"></div>
+  <div class="igData igData8"></div>
+  <div class="igData igData9"></div>
+  <div class="igData igData10"></div>
+</div>
+  </section>
+</main>
   </div>
-  </div>
+
+
 </>
 
   )
