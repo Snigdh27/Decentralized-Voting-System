@@ -96,7 +96,7 @@ function UserRegisterForm() {
             <span className="details">Phone Number</span>
             <input type="text" placeholder="Enter your number" required="" value={phoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}}/>
             <div className="button1" onSubmit={successMessage}>
-          <input type="" defaultValue="OTP" value="OTP" onChange={OTP} />
+          <input type="submit" defaultValue="OTP" value="OTP"  />
         </div>
 
         
@@ -107,7 +107,7 @@ function UserRegisterForm() {
             <span className="details">OTP</span>
             <input type="text" placeholder="Enter OTP" required="" />
             <div className="button2 button1">
-          <input type="" defaultValue="Verify OTP" value="Verify OTP" />
+          <input type="submit" defaultValue="Verify OTP" value="Verify OTP" />
         </div>
         </div>
          

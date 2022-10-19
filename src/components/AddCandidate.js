@@ -31,15 +31,53 @@ function AddCandidate() {
               required=""
             />
           </div>
-          <div className="input-box">
-            <span className="details">Date of Birth</span>
-            <input type="date" placeholder="" required="" />
-          </div>
+          
           <div className="input-box">
             <span className="details">Experience</span>
             <input
               type="text"
               placeholder="Enter candidate's experience"
+              required=""
+            />
+          </div>
+          <div className="input-box">
+            <span className="details">Avatar URL</span>
+            <input
+              type="text"
+              placeholder="Enter candidate's image url"
+              required=""
+            />
+          </div>
+          
+          <div className="input-box">
+            <span className="details">Candidate's Experience</span>
+            <input
+              type="text"
+              placeholder="Enter candidate's experience"
+              required=""
+            />
+          </div>
+          <div className="input-box">
+            <span className="details">Candidate's Region</span>
+            <input
+              type="text"
+              placeholder="Enter candidate's region"
+              required=""
+            />
+          </div>
+          <div className="input-box">
+            <span className="details">Candidate's District</span>
+            <input
+              type="text"
+              placeholder="Enter candidate's district"
+              required=""
+            />
+          </div>
+          <div className="input-box">
+            <span className="details">Candidate's Age</span>
+            <input
+              type="number"
+              placeholder="Enter candidate's description"
               required=""
             />
           </div>

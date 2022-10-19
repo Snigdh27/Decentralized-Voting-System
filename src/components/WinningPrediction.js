@@ -2,8 +2,14 @@ import React from 'react';
 import '../css/prediction.css';
 import Sidebar from './Sidebar';
 import SidebarUser from './SidebarUser';
+import $ from 'jquery'; 
 
 function WinningPrediction() {
+
+  $(function(){
+    $('table').tablesorter(); 
+  });
+
   return (
     <>
    <SidebarUser/>

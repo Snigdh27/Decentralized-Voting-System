@@ -38,7 +38,7 @@
     height: 3px;
     width: 30px;
     border-radius: 5px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(to right, #ffb369 0%,#ff4272 100%);
 }
 .add-candidate .content form .user-details{
   display: flex;
@@ -62,13 +62,13 @@
   font-size: 16px;
   border-radius: 5px;
   padding-left: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #ff4272;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
 }
 .add-candidate .user-details .input-box input:focus,
 .user-details .input-box input:valid{
-  border-color: #9b59b6;
+  border-color: #ff4272;
 }
 .add-candidate form .gender-details .gender-title{
   font-size: 20px;
@@ -97,7 +97,7 @@
 .add-candidate #dot-1:checked ~ .category label .one,
  #dot-2:checked ~ .category label .two,
  #dot-3:checked ~ .category label .three{
-   background: #9b59b6;
+  background: #ff4272;
    border-color: #d9d9d9;
  }
  .add-candidate form input[type="radio"]{
@@ -118,11 +118,11 @@
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background: linear-gradient(to right, #ffb369 0%,#ff4272 100%); 
  }
  .add-candidate form .button input:hover{
   /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  background: linear-gradient(to right, #ffb369 0%,#ff4272 100%); 
   }
  @media(max-width: 584px){
   .add-candidate .container{
