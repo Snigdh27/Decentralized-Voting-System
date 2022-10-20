@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../css/addCandidate1.css';
 import Sidebar from './Sidebar';
 
@@ -32,14 +32,7 @@ function AddCandidate() {
             />
           </div>
           
-          <div className="input-box">
-            <span className="details">Experience</span>
-            <input
-              type="text"
-              placeholder="Enter candidate's experience"
-              required=""
-            />
-          </div>
+          
           <div className="input-box">
             <span className="details">Avatar URL</span>
             <input
