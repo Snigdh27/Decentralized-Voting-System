@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/cover_page.css';
 import shape from '../img/shape.png';
-import logo from '../img/logo.jpg';
+import logo from '../img/logo.png';
 import person from '../img/person.jpg';
 import {Link} from "react-router-dom";
 

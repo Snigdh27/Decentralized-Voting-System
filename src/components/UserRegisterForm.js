@@ -3,52 +3,47 @@ import { useState } from 'react';
 import '../css/user_register.css';
 import Sidebar from './Sidebar';
 import SidebarUser from './SidebarUser';
-import { auth } from './firebase';
+// import { auth } from './firebase';
 import swal from 'sweetalert';
-import {RecaptchaVerifier,signInWithPhoneNumber } from 'firebase/auth';
-auth.languageCode='it';
+import {Link} from "react-router-dom";
+import { firebase, auth } from './firebase';
+
+
 function UserRegisterForm() {
 
-  const countryCode="+91";
-  const [phoneNumber,setPhoneNumber]=useState(countryCode);
-  const [expandForm,setExpandForm]=useState(false);
-  const [OTP,setOTP]=useState('');
+  
+  const [mynumber, setnumber] = useState("");
+	const [otp, setotp] = useState('');
+	const [show, setshow] = useState(false);
+	const [final, setfinal] = useState('');
 
-  const generateRecaptcha=()=>{
-    window.recaptchaVerifier=new RecaptchaVerifier('recaptcha-container',{
-      'size':'invisible',
-      'callback':(response)=>{
+	// Sent OTP
+	const signin = () => {
 
-      }
-    },auth);
-  }
+		if (mynumber === "" || mynumber.length < 10) return;
 
-  const requestOTP=(e)=>{
-    e.preventDefault();
-    if(phoneNumber.length>=12){
-      setExpandForm(true);
-      generateRecaptcha();
-      let appVerifier=window.recaptchaVerifier;      signInWithPhoneNumber(auth,phoneNumber,appVerifier)
-      .then(confirmationResult=>{
-        window.confirmationResult=confirmationResult;
-      }).catch((error)=>{
-        console.log(error);
-      })
-    }
-  }
+		let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+		auth.signInWithPhoneNumber(mynumber, verify).then((result) => {
+			setfinal(result);
+			alert("OTP Sent to your Mobile Number")
+			setshow(true);
+		})
+			.catch((err) => {
+				alert(err);
+				window.location.reload()
+			});
+	}
 
-  const verifyOTP=(e)=>{
-    let otp=e.target.value;
-    setOTP(otp);
-    if(otp.length===6){
-      let confirmationResult=window.confirmationResult;
-      confirmationResult.confirm(otp).then((result)=>{
-        const user=result.user;
-      }).catch((error)=>{
-
-      })
-    }
-  }
+	// Validate OTP
+	const ValidateOtp = () => {
+		if (otp === null || final === null)
+			return;
+		final.confirm(otp).then((result) => {
+			// success
+		}).catch((err) => {
+			alert("Wrong code");
+		})
+	}
 
   const successMessage=async(e)=>{
     e.preventDefault();
@@ -68,6 +63,11 @@ function UserRegisterForm() {
         swal("Your data is saved!");
       }
     });
+  }
+
+  const otpverified=async(e)=>{
+    e.preventDefault();
+    swal("Good job!", "OTP Verified Successfully", "success");
   }
 
   return (
@@ -94,22 +94,24 @@ function UserRegisterForm() {
           </div>
           <div className="input-box">
             <span className="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required="" value={phoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}}/>
-            <div className="button1" onSubmit={successMessage}>
+            <input type="text" placeholder="Enter your number" required="" value={mynumber} onChange={(e)=>{setnumber(e.target.value)}}/>
+            
+            {/* <div className="button1" onClick={signin}>
           <input type="submit" defaultValue="OTP" value="OTP"  />
-        </div>
+        </div> */}
 
-        
+        {/* <div id="recaptcha-container"></div>
+					<button onClick={signin}>Send OTP</button> */}
 
           </div>
 
-          <div className="input-box">
+          {/* <div className="input-box">
             <span className="details">OTP</span>
-            <input type="text" placeholder="Enter OTP" required="" />
-            <div className="button2 button1">
-          <input type="submit" defaultValue="Verify OTP" value="Verify OTP" />
-        </div>
-        </div>
+            <input type="text" placeholder="Enter OTP" required="" onChange={(e)=>{
+              setotp(e.target.value)
+            }} />
+            <button onClick={ValidateOtp}>Verify</button>
+        </div> */}
          
           <div className="input-box">
             <span className="details">State</span>
@@ -153,9 +155,36 @@ function UserRegisterForm() {
           </div>
         </div>
         <div className="button">
-          <input type="submit" defaultValue="Register" value="Register" />
+          <input type="submit" defaultValue="Register" value="Send OTP" onClick={signin} />
         </div>
         <div id="recaptcha-container"></div>
+        {/* <button >Send OTP</button> */}
+
+        {/* /*
+        <div id="recaptcha-container"></div>
+					<button onClick={signin}>Send OTP</button>
+
+          </div>
+        */ }
+
+      </form>
+
+      <form onSubmit={otpverified}>
+      <div className="input-box">
+      
+            <span className="details">OTP</span>
+            <input type="text" placeholder="Enter OTP" required="" onChange={(e)=>{
+              setotp(e.target.value)
+            }} />
+             <div className="button">
+          <input type="submit" defaultValue="Register" value="Verify OTP" />
+        </div>
+            <Link to="/user/elections"><div className="button">
+          <input type="submit" defaultValue="Register" value="Go to Elections" onClick={signin} />
+        </div>
+            </Link>
+        </div>
+        
       </form>
     </div>
   </div>
