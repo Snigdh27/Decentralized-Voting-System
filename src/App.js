@@ -5,7 +5,7 @@ import './App.css';
 import CoverPage from './components/CoverPage';
 import AdminLogin from './components/AdminLogin';
 import UserLogin from './components/UserLogin';
-
+// import connect_button from './components/connect_button';
 import UserDashboard from './components/UserDashboard';
 import AdminDashboard from './components/AdminDashboard';
 
