@@ -2,8 +2,9 @@
     width: 282px;
     height: 356px;
     background: white;
-    margin: 136px 490px;
-    margin-bottom: 0px;
+    margin-left: 503px;
+    margin-top: 100px;
+    margin-bottom: 144px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 4px 4px 10px #999;
@@ -17,7 +18,8 @@
     height: 356px;
     color: #bebebe;
     background: #24222a;
-    margin: -356px 793px;
+    margin-top: -500px;
+    margin-left: 801px;
     background-image: linear-gradient(rgb(7 10 8 / 40%), rgb(22 22 35)), url(https://static.pexels.com/photos/21014/pexels-photo-medium.jpg);
     border-radius: 10px;
     text-align: center;

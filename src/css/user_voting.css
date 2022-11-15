@@ -17,6 +17,51 @@
     
 }
 
+.user-voting .btn {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    margin-top: 92px;
+    margin-left: 1156px;
+    padding: 16px 32px;
+    outline: none;
+    
+    border: none;
+    border-radius: 24px;  
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    box-shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+  }
+
+  .user-voting .btn::after {
+    content: "";
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms ease;
+  }
+
+  .user-voting .btn:hover::after {
+    opacity: 1;
+  }
+
+  .user-voting .btn--accept {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+  .user-voting .btn--accept::after {
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);;
+  /* background-color: #000000; */
+}
+
 .user-voting .dashboard-cards::after{
     content: '';
     position: absolute;

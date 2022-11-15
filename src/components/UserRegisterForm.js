@@ -176,11 +176,11 @@ function UserRegisterForm() {
             <input type="text" placeholder="Enter OTP" required="" onChange={(e)=>{
               setotp(e.target.value)
             }} />
-             <div className="button">
+             <div className="button" style={{width:"310px"}}>
           <input type="submit" defaultValue="Register" value="Verify OTP" />
         </div>
-            <Link to="/user/elections"><div className="button">
-          <input type="submit" defaultValue="Register" value="Go to Elections" onClick={signin} />
+            <Link to="/user/elections"><div className="button" style={{width:"310px",marginTop:"-80px",marginLeft:"330px"}}>
+          <input type="submit" defaultValue="Register" value="Go to Elections"  />
         </div>
             </Link>
         </div>

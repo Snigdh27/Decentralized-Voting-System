@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/voting.css';
 
+
 function Candidates(props) {
   return (
     <>
@@ -40,7 +41,7 @@ function Candidates(props) {
             <br />
             <li>Party : {props.party}</li>
             <br />
-            <li>Region : {props.region}</li>
+            <li>State : {props.state}</li>
             <br />
             <li>District : {props.district}</li>
           </ul>

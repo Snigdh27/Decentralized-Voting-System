@@ -1,9 +1,29 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import '../css/voting.css';
 import Sidebar from './Sidebar';
 import Candidates from './Candidates';
+// import Records from './candidates.json';
+import fireDb from "./firebase";
 
 function CandidateDetails() {
+
+  const [data, setData] = useState({});
+
+    useEffect(() => {
+        fireDb.child("voting_system").on("value", (snapshot) => {
+            if (snapshot.val() !== null) {
+                setData({ ...snapshot.val() });
+            } else {
+                setData({});
+            }
+
+        });
+
+        return () => {
+            setData({});
+        };
+    }, []);
+
   return (
     <>
   <Sidebar title="Admin"/>
@@ -11,7 +31,14 @@ function CandidateDetails() {
   <h1>Candidate Details</h1>
  
   <section className="profile-cards">
-  <Candidates imgUrl="https://i.pinimg.com/550x/4d/72/97/4d7297dad94265c0acbc3b677d418935.jpg" candidateName="Candidate-1" about="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quaerat libero ut iure ratione repudiandae ipsam neque amet reprehenderit magnam vel quae eaque sed obcaecati asperiores velit qui. Beatae aut, ipsum debitis culpa ea deserunt sequi molestiae esse fuga quos minus nam voluptas alias officiis quaerat, similique quae rem dicta." party="Party"/>
+  {
+    Object.keys(data).map((id,index)=>{
+      return(
+        <Candidates candidateName={data[id].name} imgUrl={data[id].url} party={data[id].party} experience={data[id].experience} age={data[id].age} state={data[id].region} district={data[id].district}/>
+      )
+    })
+  }
+  
   </section>
   </div>
 </>
