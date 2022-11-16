@@ -1,10 +1,12 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
 import '../css/user_elections.css';
+
 import Sidebar from './Sidebar';
 import SidebarUser from './SidebarUser';
 import {ethers} from 'ethers';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function UserElections() {
 
@@ -41,7 +43,16 @@ function UserElections() {
       const provider=new ethers.providers.Web3Provider(window.ethereum);
       set_connect_wallet("Connected")
       // const address=walletAddress;
-      alert('Metamask Connected Successfully....')
+      toast.success('Metamask Connected Successfully!!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
 
     }
   }
@@ -96,6 +107,7 @@ function UserElections() {
     </div>
   </div>
   </div>
+  <ToastContainer/>
 </>
 
   )

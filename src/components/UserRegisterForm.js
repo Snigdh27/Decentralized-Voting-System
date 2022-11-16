@@ -40,6 +40,7 @@ function UserRegisterForm() {
 			return;
 		final.confirm(otp).then((result) => {
 			// success
+      alert("Correct code");
 		}).catch((err) => {
 			alert("Wrong code");
 		})
@@ -65,10 +66,10 @@ function UserRegisterForm() {
     });
   }
 
-  const otpverified=async(e)=>{
-    e.preventDefault();
-    swal("Good job!", "OTP Verified Successfully", "success");
-  }
+  // const otpverified=async(e)=>{
+  //   e.preventDefault();
+  //   swal("Good job!", "OTP Verified Successfully", "success");
+  // }
 
   return (
     <>
@@ -169,7 +170,7 @@ function UserRegisterForm() {
 
       </form>
 
-      <form onSubmit={otpverified}>
+      <form >
       <div className="input-box">
       
             <span className="details">OTP</span>
@@ -177,7 +178,7 @@ function UserRegisterForm() {
               setotp(e.target.value)
             }} />
              <div className="button" style={{width:"310px"}}>
-          <input type="submit" defaultValue="Register" value="Verify OTP" />
+          <button onClick={ValidateOtp}>Verify OTP</button>
         </div>
             <Link to="/user/elections"><div className="button" style={{width:"310px",marginTop:"-80px",marginLeft:"330px"}}>
           <input type="submit" defaultValue="Register" value="Go to Elections"  />

@@ -5,6 +5,8 @@ import fireDb from './firebase';
 import {useNavigate,useParams} from "react-router-dom";
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const initialState = {
@@ -29,7 +31,18 @@ function AddCandidate() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!name || !party || !url || !experience || !region || !district || !age ) {
-            alert("Please provide value in each input field")
+            // alert("Please provide value in each input field")
+            toast.error('Provide each field', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
+            
         }
         else {
             fireDb.child("voting_system").push(state, (err) => {
@@ -37,7 +50,17 @@ function AddCandidate() {
                     alert(err);
                 }
                 else {
-                    alert("Data Added Successfully");
+                    // alert("Data Added Successfully");
+                    toast.success('Data Added Successfully!!', {
+                      position: "top-center",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });
                 }
             });
             // setTimeout(() => history.push("/"), 500);
@@ -153,7 +176,7 @@ function AddCandidate() {
       </form>
     </div>
   </div>
-  {/* <ToastContainer /> */}
+  <ToastContainer />
   </div>
 </>
 

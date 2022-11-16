@@ -23,6 +23,7 @@ function UserDashboard() {
 </ul>
       </p>
       <br/>
+      
       <h1>2. Voting Process</h1>
       <p>
       <ul >

@@ -1,94 +1,50 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import '../css/election_details.css';
+import Elections from './Elections';
 import Sidebar from './Sidebar';
+import fireDb from "./firebase";
 
 function ElectionDetails() {
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fireDb.child("elections").on("value", (snapshot) => {
+        if (snapshot.val() !== null) {
+            setData({ ...snapshot.val() });
+        } else {
+            setData({});
+        }
+
+    });
+
+    return () => {
+        setData({});
+    };
+}, []);
+
   return (
-    <div>
-      <>
-      <Sidebar title="Admin"/>
-  <div className="election-details">
+    <>
+    <Sidebar title="Admin"/>
+    <div className="election-details">
   <h1>Election Details</h1>
   <div className="dashboard-cards">
     <div className="card-container">
-      <div className="card">
-        <div className="content">
-          <h2>01</h2>
-          <h3>Election</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            excepturi reiciendis facere, officiis ullam. Illum iusto,
-            repellendus itaque corrupti suscipit at!
-          </p>
-          {/* <a href="#">Cast Your Vote</a> */}
-        </div>
+    {
+      Object.keys(data).map((id,index)=>{
+        return(
+          <Elections id={index+1} type={data[id].type} organizer={data[id].organiser} startDate={data[id].startDate} endDate={data[id].endDate} startTime={data[id].startTime} endTime={data[id].endTime}/>
+          
+        )
+      })
+    }
       </div>
-      <div className="card">
-        <div className="content">
-          <h2>02</h2>
-          <h3>Election</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            excepturi reiciendis facere, officiis ullam. Illum iusto,
-            repellendus itaque corrupti suscipit at!
-          </p>
-          {/* <a href="#">Cast Your Vote</a> */}
-        </div>
       </div>
-      <div className="card">
-        <div className="content">
-          <h2>03</h2>
-          <h3>Election</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            excepturi reiciendis facere, officiis ullam. Illum iusto,
-            repellendus itaque corrupti suscipit at!
-          </p>
-          {/* <a href="#">Cast Your Vote</a> */}
-        </div>
       </div>
-      <div className="card">
-        <div className="content">
-          <h2>04</h2>
-          <h3>Election</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            excepturi reiciendis facere, officiis ullam. Illum iusto,
-            repellendus itaque corrupti suscipit at!
-          </p>
-          {/* <a href="#">Cast Your Vote</a> */}
-        </div>
-      </div>
-      <div className="card">
-        <div className="content">
-          <h2>05</h2>
-          <h3>Election</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            excepturi reiciendis facere, officiis ullam. Illum iusto,
-            repellendus itaque corrupti suscipit at!
-          </p>
-          {/* <a href="#">Cast Your Vote</a> */}
-        </div>
-      </div>
-      <div className="card">
-        <div className="content">
-          <h2>06</h2>
-          <h3>Election</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            excepturi reiciendis facere, officiis ullam. Illum iusto,
-            repellendus itaque corrupti suscipit at!
-          </p>
-          {/* <a href="#">Cast Your Vote</a> */}
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</>
 
-    </div>
+    
+
+    </>
   )
 }
 
