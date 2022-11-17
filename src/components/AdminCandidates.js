@@ -30,10 +30,7 @@ function AdminCandidates(props) {
     <br />
     <div className="description"style={{marginTop:"20px",fontSize:"1rem"}}>
           <ul>
-            <li>Experience : {props.experience}</li>
-            <br />
-            <li>Age : {props.age}</li>
-            <br />
+           
             <li>Party : {props.party}</li>
             <br />
             <li>State : {props.state}</li>

@@ -1,9 +1,28 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react';
 import '../css/winning_prediction.css';
 import Sidebar from './Sidebar';
 import SidebarUser from './SidebarUser';
+import fireDb from "./firebase";
 
-function ElectionResults() {
+function ElectionResults(props) {
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+      fireDb.child("voting_system").on("value", (snapshot) => {
+          if (snapshot.val() !== null) {
+              setData({ ...snapshot.val() });
+          } else {
+              setData({});
+          }
+
+      });
+
+      return () => {
+          setData({});
+      };
+  }, []);
+
   return (
     <>
   
@@ -27,67 +46,19 @@ function ElectionResults() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td data-label="Name">Candidate-1</td>
-            <td data-label="Grid">Party-1</td>
-            <td data-label="Type">Region-1</td>
+          {
+            Object.keys(data).map((id,index)=>{
+              return(
+                <tr>
+            <td data-label="Name">{data[id].name}</td>
+            <td data-label="Grid">{data[id].party}</td>
+            <td data-label="Type">{data[id].district}</td>
             <td data-label="Region">XXXXXX</td>
-            {/* <td data-label="Chickens">
-                      <span class="no">&#10007;</span>
-                  </td>
-                  <td data-label="Pigs">
-                      <span class="no">&#10007;</span>
-                  </td>
-                  <td data-label="Snakes">
-                      <span class="no">&#10007;</span>
-                  </td> */}
           </tr>
-          <tr>
-            <td data-label="Name">Candidate-2</td>
-            <td data-label="Grid">Party-2</td>
-            <td data-label="Type">Region-2</td>
-            <td data-label="Region">XXXXXX</td>
-            {/* <td data-label="Chickens">
-                      <span class="yes">&#10003;</span>
-                  </td>
-                  <td data-label="Pigs">
-                      <span class="no">&#10007;</span>
-                  </td>
-                  <td data-label="Snakes">
-                      <span class="no">&#10007;</span>
-                  </td> */}
-          </tr>
-          <tr>
-            <td data-label="Name">Candidate-3</td>
-            <td data-label="Grid">Party-3</td>
-            <td data-label="Type">Region-3</td>
-            <td data-label="Region">XXXXXX</td>
-            {/* <td data-label="Chickens">
-                      <span class="no">&#10007;</span>
-                  </td>
-                  <td data-label="Pigs">
-                      <span class="no">&#10007;</span>
-                  </td>
-                  <td data-label="Snakes">
-                      <span class="yes">&#10003;</span>
-                  </td> */}
-          </tr>
-          <tr>
-            <td data-label="Name">Candidate-4</td>
-            <td data-label="Grid">Party-4</td>
-            <td data-label="Type">Region-4</td>
-            <td data-label="Region">XXXXXX</td>
-            {/* <td data-label="Chickens">
-                      <span class="yes">&#10003;</span>
-                  </td>
-                  <td data-label="Pigs">
-                      <span class="no">&#10007;</span>
-                  </td>
-                  <td data-label="Snakes">
-                      <span class="no">&#10007;</span>
-                  </td> */}
-          </tr>
-          
+              )
+            })
+          }
+         
         </tbody>
       </table>
     </main>

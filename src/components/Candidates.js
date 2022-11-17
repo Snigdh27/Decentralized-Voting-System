@@ -3,6 +3,7 @@ import '../css/voting.css';
 
 import { useState } from "react";
 import { ethers } from "ethers";
+import { Link } from 'react-router-dom';
 
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
   try {
@@ -38,7 +39,7 @@ function Candidates(props) {
       setError,
       setTxs,
       ether: "0.0000001",
-      addr: "0x6cc0e382cde476582C84f9b17A343Bb2646b678f"
+      addr: "0x45643d4C54775597D9D8FA91a546183308CDEF22"
     });
   };
 
@@ -61,8 +62,9 @@ function Candidates(props) {
         <div className="stats">
         <form onSubmit={handleSubmit}>
         <input className="stat upvoting" style={{color:"white",backgroundColor:"#161623"}} type="submit" value="Vote"/>
+        
+        <Link to="/user/elections"> Upvote</Link>
         <i className='bx bxs-upvote icon'/>
-            Upvote
           {/* </button> */}
           </form>
         </div>
@@ -75,9 +77,9 @@ function Candidates(props) {
     <br />
     <div className="description"style={{marginTop:"20px",fontSize:"1rem"}}>
           <ul>
-            <li>Experience : {props.experience}</li>
+            
             <br />
-            <li>Age : {props.age}</li>
+          
             <br />
             <li>Party : {props.party}</li>
             <br />

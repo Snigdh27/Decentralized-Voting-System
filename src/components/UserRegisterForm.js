@@ -66,10 +66,10 @@ function UserRegisterForm() {
     });
   }
 
-  // const otpverified=async(e)=>{
-  //   e.preventDefault();
-  //   swal("Good job!", "OTP Verified Successfully", "success");
-  // }
+  const otpverified=async(e)=>{
+    e.preventDefault();
+    swal("Good job!", "OTP Verified Successfully", "success");
+  }
 
   return (
     <>
@@ -170,22 +170,25 @@ function UserRegisterForm() {
 
       </form>
 
+
       <form >
+        
+      <div className="user-details">
       <div className="input-box">
-      
             <span className="details">OTP</span>
             <input type="text" placeholder="Enter OTP" required="" onChange={(e)=>{
               setotp(e.target.value)
             }} />
              <div className="button" style={{width:"310px"}}>
-          <button onClick={ValidateOtp}>Verify OTP</button>
+          {/* <button >Verify OTP</button> */}
+          <input type="submit" defaultValue="Register" onClick={otpverified} value="Verify OTP"/>
         </div>
             <Link to="/user/elections"><div className="button" style={{width:"310px",marginTop:"-80px",marginLeft:"330px"}}>
           <input type="submit" defaultValue="Register" value="Go to Elections"  />
         </div>
             </Link>
         </div>
-        
+        </div>
       </form>
     </div>
   </div>

@@ -13,10 +13,10 @@ const initialState = {
   name: "",
   party:"",
   url:"",
-  experience:"",
+  //experience:"",
   region:"",
   district:"",
-  age:"",
+ // age:"",
 };
 
 
@@ -26,11 +26,11 @@ function AddCandidate() {
   const [data, setData] = useState({});
   
 
-  const { name,party,url,experience,region,district,age} = state;
+  const { name,party,url,region,district} = state;
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!name || !party || !url || !experience || !region || !district || !age ) {
+        if (!name || !party || !url  || !region || !district ) {
             // alert("Please provide value in each input field")
             toast.error('Provide each field', {
               position: "top-center",
@@ -121,18 +121,7 @@ function AddCandidate() {
             />
           </div>
           
-          <div className="input-box">
-            <span className="details">Candidate's Experience</span>
-            <input
-              type="text"
-              id="experience"
-              name="experience"
-              placeholder="Enter candidate's experience"
-              required=""
-              onChange={handleInputChange}
-              value={experience}
-            />
-          </div>
+         
           <div className="input-box">
             <span className="details">Candidate's State</span>
             <input
@@ -157,18 +146,7 @@ function AddCandidate() {
               value={district}
             />
           </div>
-          <div className="input-box">
-            <span className="details">Candidate's Age</span>
-            <input
-              type="text"
-              id="age"
-              name="age"
-              placeholder="Enter candidate's age"
-              required=""
-              onChange={handleInputChange}
-              value={age}
-            />
-          </div>
+          
         </div>
         <div className="button">
           <input type="submit" defaultValue="Add Candidate" value="Add Candidate" />
