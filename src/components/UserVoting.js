@@ -10,41 +10,6 @@ import Candidates from './Candidates';
 function UserVoting() {
 
   const [data, setData] = useState({});
-  // const [walletAddress,setWalletAddress]=useState('');
-  // const [connect_wallet,set_connect_wallet]=useState("Connect To Ethereum Account");
-  // async function requestAccount(){
-  //   console.log('Requesting account...');
-
-  //   if(window.ethereum){
-  //     console.log('detected');
-
-  //     try{
-  //       const accounts=await window.ethereum.request({
-  //         method:"eth_requestAccounts",
-  //       });
-
-  //       setWalletAddress(accounts[0]);
-  //     }
-  //     catch(error){
-  //       console.log('Error Connecting..');
-  //     }
-  //   }
-  //   else{
-  //     alert('Metamask Not Detected');
-  //   }
-
-  // }
-
-  // async function connectWallet(){
-  //   if(typeof window.ethereum !== 'undefined'){
-  //     await requestAccount();
-  //     const provider=new ethers.providers.Web3Provider(window.ethereum);
-  //     set_connect_wallet("Connected")
-
-  //     alert('Metamask Connected Successfully....')
-
-  //   }
-  // }
 
     useEffect(() => {
         fireDb.child("voting_system").on("value", (snapshot) => {

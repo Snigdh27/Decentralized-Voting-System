@@ -5,6 +5,8 @@ import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "./UserAuthContext";
 import './Login.css';
+import { auth} from "../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -33,6 +35,20 @@ const Login = (props) => {
       console.log(error.message);
     }
   };
+
+  // const handleGoogleSignIn=()=>{
+  //   signInWithPopup(auth,provider)
+  //   .then((result)=>{
+  //     const email=result.user.email;
+  //     const name=result.user.displayName;
+      
+  //     localStorage.setItem("name",name);
+  //     localStorage.setItem("email",email);
+  //   })
+  //   .catch((error)=>{
+  //     console.log(error);
+  //   })
+  // }
 
   return (
     <>

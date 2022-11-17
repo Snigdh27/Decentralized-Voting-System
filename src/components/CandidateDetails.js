@@ -1,9 +1,10 @@
 import React,{useEffect,useState} from 'react';
 import '../css/voting.css';
 import Sidebar from './Sidebar';
-import Candidates from './Candidates';
+// import Candidates from './Candidates';
 // import Records from './candidates.json';
 import fireDb from "./firebase";
+import AdminCandidates from './AdminCandidates';
 
 function CandidateDetails() {
 
@@ -34,7 +35,7 @@ function CandidateDetails() {
   {
     Object.keys(data).map((id,index)=>{
       return(
-        <Candidates candidateName={data[id].name} imgUrl={data[id].url} party={data[id].party} experience={data[id].experience} age={data[id].age} state={data[id].region} district={data[id].district}/>
+        <AdminCandidates candidateName={data[id].name} imgUrl={data[id].url} party={data[id].party} experience={data[id].experience} age={data[id].age} state={data[id].region} district={data[id].district}/>
       )
     })
   }
