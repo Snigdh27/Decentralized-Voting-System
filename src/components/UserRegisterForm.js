@@ -4,10 +4,25 @@ import '../css/user_register.css';
 import Sidebar from './Sidebar';
 import SidebarUser from './SidebarUser';
 // import { auth } from './firebase';
+import {useNavigate,useParams} from "react-router-dom";
 import swal from 'sweetalert';
 import {Link} from "react-router-dom";
 import { firebase, auth } from './firebase';
+import fireDb from './firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+const initialState = {
+  name:"",
+  aadhar:"",
+  email:"",
+  phone:"",
+  region:"",
+  district:"",
+  dob:"",
+  voterid:"",
+  gender:"",
+};
 
 function UserRegisterForm() {
 
@@ -17,6 +32,55 @@ function UserRegisterForm() {
 	const [show, setshow] = useState(false);
 	const [final, setfinal] = useState('');
 
+  const [state, setState] = useState(initialState);
+  const [data, setData] = useState({});
+
+  const { name,aadhar,email,phone,region,district,dob,voterid,gender} = state;
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!name || !aadhar || !email  || !region || !district || !phone || !dob || !voterid || !gender ) {
+            // alert("Please provide value in each input field")
+            toast.error('Provide each field', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
+            
+        }
+        else {
+            fireDb.child("registered_user").push(state, (err) => {
+                if (err) {
+                    alert(err);
+                }
+                else {
+                    // alert("Data Added Successfully");
+                    toast.success('Data Added Successfully!!', {
+                      position: "top-center",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });
+                }
+            });
+            // setTimeout(() => history.push("/"), 500);
+            setTimeout(() => navigate('/admin/candidate-details'), 500);
+        }
+    };
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setState({ ...state, [name]: value });
+    };
+
 	// Sent OTP
 	const signin = () => {
 
@@ -25,7 +89,7 @@ function UserRegisterForm() {
 		let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 		auth.signInWithPhoneNumber(mynumber, verify).then((result) => {
 			setfinal(result);
-			alert("OTP Sent to your Mobile Number")
+			toast("OTP Sent to your Mobile Number")
 			setshow(true);
 		})
 			.catch((err) => {
@@ -40,9 +104,9 @@ function UserRegisterForm() {
 			return;
 		final.confirm(otp).then((result) => {
 			// success
-      alert("Correct code");
+      toast.success("Correct code");
 		}).catch((err) => {
-			alert("Wrong code");
+			toast.error("Wrong code");
 		})
 	}
 
@@ -83,19 +147,27 @@ function UserRegisterForm() {
         <div className="user-details">
           <div className="input-box">
             <span className="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required="" />
+            <input type="text" placeholder="Enter your name" required="" id="name"
+              name="name" onChange={handleInputChange}
+              value={name}/>
           </div>
           <div className="input-box">
             <span className="details">Aadhar Number</span>
-            <input type="text" placeholder="Enter your username" required="" />
+            <input type="text" placeholder="Enter your username" required="" id="aadhar"
+              name="aadhar" onChange={handleInputChange}
+              value={aadhar} />
           </div>
           <div className="input-box">
             <span className="details">Email</span>
-            <input type="text" placeholder="Enter your email" required="" />
+            <input type="text" placeholder="Enter your email" required="" id="email"
+              name="email" onChange={handleInputChange}
+              value={email}/>
           </div>
           <div className="input-box">
             <span className="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required="" value={mynumber} onChange={(e)=>{setnumber(e.target.value)}}/>
+            <input type="text" placeholder="Enter your number" required="" value={mynumber} onChange={(e)=>{setnumber(e.target.value)}} id="phone"
+              name="phone"
+              />
             
             {/* <div className="button1" onClick={signin}>
           <input type="submit" defaultValue="OTP" value="OTP"  />
@@ -116,22 +188,30 @@ function UserRegisterForm() {
          
           <div className="input-box">
             <span className="details">State</span>
-            <input type="text" placeholder="Enter your state e.g. (Uttar Pradesh)" required="" />
+            <input type="text" placeholder="Enter your state e.g. (Uttar Pradesh)" required="" id="state"
+              name="state" onChange={handleInputChange}
+              value={region} />
           </div>
           <div className="input-box">
             <span className="details">District</span>
-            <input type="text" placeholder="Enter your district e.g. (Ghaziabad)" required="" />
+            <input type="text" placeholder="Enter your district e.g. (Ghaziabad)" required="" id="district"
+              name="district" onChange={handleInputChange}
+              value={district} />
           </div>
           <div className="input-box">
             <span className="details">Date of Birth</span>
-            <input type="date" placeholder="Enter your password" required="" />
+            <input type="date" placeholder="Enter your password" required="" id="dob"
+              name="dob" onChange={handleInputChange}
+              value={dob} />
           </div>
           <div className="input-box">
             <span className="details">Voter Id</span>
             <input
               type="text"
               placeholder="Enter your Voter-Id"
-              required=""
+              required="" id="voterid"
+              name="voterid" onChange={handleInputChange}
+              value={voterid}
             />
           </div>
         </div>
@@ -193,7 +273,7 @@ function UserRegisterForm() {
     </div>
   </div>
   </div>
-
+<ToastContainer/>
   
 
 </>
