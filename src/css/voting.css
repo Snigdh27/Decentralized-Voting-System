@@ -1,32 +1,39 @@
 .profile-card-1 {
-    width: 282px;
-    height: 356px;
-    background: white;
-    margin-left: 503px;
-    margin-top: 100px;
-    margin-bottom: 144px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 4px 4px 10px #999;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
+  width: 282px;
+  height: 356px;
+  background: white;
+  margin-left: 503px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 4px 4px 10px #999;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+button.stats.stat.upvoting {
+  margin-left: 707px;
+  /* margin-top: -68px; */
+  /* margin-bottom: 41px; */
 }
 
 .profile-card-2 {
-    width: 282px;
-    height: 356px;
-    color: #bebebe;
-    background: #24222a;
-    margin-top: -500px;
-    margin-left: 801px;
-    background-image: linear-gradient(rgb(7 10 8 / 40%), rgb(22 22 35)), url(https://static.pexels.com/photos/21014/pexels-photo-medium.jpg);
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 4px 4px 10px #999;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
+  width: 282px;
+  height: 356px;
+  color: #bebebe;
+  background: #24222a;
+  margin-top: -436px;
+  margin-left: 801px;
+  background-image: linear-gradient(rgb(7 10 8 / 40%), rgb(22 22 35)), url(https://static.pexels.com/photos/21014/pexels-photo-medium.jpg);
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: 4px 4px 10px #999;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* .profile-card-3 {
