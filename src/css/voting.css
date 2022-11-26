@@ -18,7 +18,10 @@ button.stats.stat.upvoting {
   /* margin-top: -68px; */
   /* margin-bottom: 41px; */
 }
-
+.hideit
+{
+  display:none !important;
+}
 .profile-card-2 {
   width: 282px;
   height: 356px;

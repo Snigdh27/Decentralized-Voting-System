@@ -88,7 +88,9 @@ function UserElections(props) {
       {
         Object.keys(data).map((id,index)=>{
           return(
-            <UserElectionsData id={index+1} type={data[id].type} organizer={data[id].organiser} startDate={data[id].startDate} endDate={data[id].endDate} startTime={data[id].startTime} endTime={data[id].endTime}/>
+            <UserElectionsData id={index+1} type={data[id].type} organizer={data[id].organiser} startDate={data[id].startDate} endDate={data[id].endDate} startTime={data[id].startTime} endTime={data[id].endTime}
+            
+            />
             
           )
         })

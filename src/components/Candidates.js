@@ -9,79 +9,15 @@ import {renderToString} from "react-dom/server";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// const styles = {
-//   fontFamily: "sans-serif",
-//   textAlign: "center"
-// };
-// const colstyle = {
-//   width: "30%"
-// };
-// const tableStyle = {
-//   width: "100%"
-// };
-// const Prints = () => (
-//   <div>
 
-//     <h3>Time & Materials Statement of Work (SOW)</h3>
-    
-//     <h4>General Information</h4>
-//     <table id="tab_customers" class="table table-striped" style={tableStyle}>
-//       <colgroup>
-//         <col span="1" style={colstyle} />
-//         <col span="1" style={colstyle} />
-//       </colgroup>
-//       <thead>
-//         <tr class="warning">
-//           <th>SOW Creation Date</th>
-//           <th>SOW Start Date</th>
-//           <th>Project</th>
-//           <th>Last Updated</th>
-//           <th>SOW End Date</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         <tr>
-//           <td>Dec 13, 2017</td>
-//           <td>Jan 1, 2018</td>
-//           <td>NM Connect - NMETNMCM</td>
-//           <td>Dec 13, 2017</td>
-//           <td>Dec 31, 2018</td>
-//         </tr>
-//       </tbody>
-//     </table>
-//     <p>
-//       This is a Time and Materials Statement of Work between Northwestern Mutual
-//       Life Insurance Company and Infosys with all general terms and conditions
-//       as described in the current Master Agreement and its related documents
-//     </p>
-//   </div>
-// );
-
-// const print = () => {
-//   const string = renderToString(<Prints />);
-//   const pdf = new jsPDF("p", "mm", "a4");
-//   const columns = [
-//     "SOW Creation Date",
-//     "SOW Start Date",
-//     "Project",
-//     "Last Updated",
-//     "SOW End Date"
-//   ];
-//   var rows = [
-//     [
-//       "Dec 13, 2017",
-//       "Jan 1, 2018",
-//       "ABC Connect - ABCXYZ",
-//       "Dec 13, 2017",
-//       "Dec 31, 2018"
-//     ]
-//   ];
-//   pdf.fromHTML(string);
-//   pdf.save("pdf");
-// };
 
 
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
+  var countVote=document.getElementsByClassName('disable');
+  console.log(countVote);
+  for (let i = 0; i <countVote.length; i++) {
+    countVote[i].className += " hideit";
+  }
   try {
     if (!window.ethereum)
       throw new Error("No crypto wallet found. Please install it.");
@@ -96,7 +32,8 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
     });
     console.log({ ether, addr });
     toast.success("Transaction Successful");
-    toast("Click on Upvote for final step")
+    
+    toast("Download the voting slip");
     console.log("tx", tx);
     setTxs([tx]);
   } catch (err) {
@@ -205,8 +142,19 @@ function Candidates(props) {
       setError,
       setTxs,
       ether: "0.0000001",
-      addr: "0xed75306F1C7d3c9a79463689dBBB8155BA9dF43E"
+      addr: "0xCC1966Eea0AabA3DFDA8d5FFfD3593499F9878Da"
     });
+
+    let previous_votes = localStorage.getItem(`${props.party}`);
+    if(previous_votes === null || (previous_votes === undefined)){
+      previous_votes = 1;
+    }else{
+      previous_votes = parseInt(previous_votes);
+      previous_votes+=1;
+    }
+
+    localStorage.setItem(`${props.party}`, previous_votes);
+
   };
 
   return (
@@ -227,9 +175,9 @@ function Candidates(props) {
         <div className="line" />
         <div className="stats">
         <form onSubmit={handleSubmit}>
-        <input className="stat upvoting" style={{color:"white",backgroundColor:"#161623"}} type="submit" value="Vote"/>
+        <input className="stat upvoting disable"  style={{color:"white",backgroundColor:"#161623"}} type="submit" value="Vote"/>
         &nbsp;&nbsp;&nbsp;
-        <button className="stat upvoting" style={{color:"white",backgroundColor:"#161623"}} onClick={print} ><i className='bx bxs-upvote icon ' /></button>
+        <button className="stat upvoting disable" style={{color:"white",backgroundColor:"#161623"}} onClick={print} ><i className='bx bxs-upvote icon ' /></button>
         
           {/* </button> */}
           </form>

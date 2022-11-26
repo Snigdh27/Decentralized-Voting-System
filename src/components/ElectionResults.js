@@ -53,7 +53,7 @@ function ElectionResults(props) {
             <td data-label="Name">{data[id].name}</td>
             <td data-label="Grid">{data[id].party}</td>
             <td data-label="Type">{data[id].district}</td>
-            <td data-label="Region">XXXXXX</td>
+            <td data-label="Region">{(localStorage.getItem(`${data[id].party}`)===null||localStorage.getItem(`${data[id].party}`)===undefined) ? 0 : localStorage.getItem(`${data[id].party}`) }</td>
           </tr>
               )
             })
