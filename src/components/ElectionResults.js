@@ -30,7 +30,7 @@ function ElectionResults(props) {
   <div className="election-results">
   <section className="results">
     <main>
-      <h1>Final Election Results</h1>
+      <h1>Election Status</h1>
       <br />
       <br />
       <table>
@@ -53,7 +53,7 @@ function ElectionResults(props) {
             <td data-label="Name">{data[id].name}</td>
             <td data-label="Grid">{data[id].party}</td>
             <td data-label="Type">{data[id].district}</td>
-            <td data-label="Region">{(localStorage.getItem(`${data[id].party}`)===null||localStorage.getItem(`${data[id].party}`)===undefined) ? 0 : localStorage.getItem(`${data[id].party}`) }</td>
+            <td data-label="Region">{(localStorage.getItem(`${data[id].name}`)===null||localStorage.getItem(`${data[id].name}`)===undefined) ? 0 : localStorage.getItem(`${data[id].name}`) }</td>
           </tr>
               )
             })

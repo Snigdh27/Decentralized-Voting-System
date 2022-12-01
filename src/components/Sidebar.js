@@ -89,6 +89,13 @@ function Sidebar(props) {
               </Link>
                
               </li>
+
+              <li className="list">
+              <Link to="/user/results" className="nav-link"><i className='bx bxl-tailwind-css icon' style={{color:"#fcfcfcd4"}}/>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Election Status</span></Link>
+                
+              </li>
+
             </ul>
             <div className="bottom-cotent">
               <li className="list">

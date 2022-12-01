@@ -145,7 +145,7 @@ function Candidates(props) {
       addr: "0xCC1966Eea0AabA3DFDA8d5FFfD3593499F9878Da"
     });
 
-    let previous_votes = localStorage.getItem(`${props.party}`);
+    let previous_votes = localStorage.getItem(`${props.candidateName}`);
     if(previous_votes === null || (previous_votes === undefined)){
       previous_votes = 1;
     }else{
@@ -153,7 +153,7 @@ function Candidates(props) {
       previous_votes+=1;
     }
 
-    localStorage.setItem(`${props.party}`, previous_votes);
+    localStorage.setItem(`${props.candidateName}`, previous_votes);
 
   };
 

@@ -78,11 +78,11 @@ function SidebarUser() {
                   <span className="link" style={{color:"#fcfcfcd4"}}>Winning Prediction</span></Link>
                 
               </li> */}
-              <li className="list">
+              {/* <li className="list">
               <Link to="/user/results" className="nav-link"><i className='bx bxl-tailwind-css icon' style={{color:"#fcfcfcd4"}}/>
-                  <span className="link" style={{color:"#fcfcfcd4"}}>Final Results</span></Link>
+                  <span className="link" style={{color:"#fcfcfcd4"}}>Election Status</span></Link>
                 
-              </li>
+              </li> */}
               
             </ul>
             <div className="bottom-cotent">
