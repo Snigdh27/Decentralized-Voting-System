@@ -26,7 +26,7 @@ function ElectionResults(props) {
   return (
     <>
   
-  <SidebarUser/>
+  <Sidebar title="Admin"/>
   <div className="election-results">
   <section className="results">
     <main>
